@@ -12,11 +12,15 @@ import { BiMapPin } from "react-icons/bi";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import avatar from "../assets/avatar.png";
 import CustomContainer from "./common/customContainer";
+import bg from "../assets/bg.svg";
 
 const Homepage = () => {
   return (
     <Flex
-      bg="rgba(0, 0, 0, 1)"
+      backgroundColor=" #000000"
+      backgroundImage={`url(${bg})`}
+      backgroundRepeat="repeat"
+      backgroundSize="25rem"
       placeContent="center"
       direction="column"
       py="20"
