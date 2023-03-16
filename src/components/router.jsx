@@ -9,10 +9,10 @@ const router = createBrowserRouter([
     element: <Homepage />,
   },
 
-  {
-    path: "*",
-    element: <NotFound />,
-  },
+  // {
+  //   path: "*",
+  //   element: <NotFound />,
+  // },
 ]);
 
 export default router;

@@ -1,5 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
-
+import bg from "./assets/bg.svg";
 import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
 
 const colors = {
@@ -27,16 +27,19 @@ const styles = {
   global: {
     html: {
       fontSize: "92%",
+      backgroundColor: " #000000",
+      backgroundImage: `url(${bg})`,
+      scrollBehavior: "smooth",
     },
-    // "body::-webkit-scrollbar": {
-    //   width: ".5rem",
-    //   height: "4rem",
-    // },
-    // "body::-webkit-scrollbar-thumb": {
-    //   background: "secondary.100",
-    //   // borderRadius: "2rem",
-    // },
-    // "body::-webkit-scrollbar-track": {},
+    "body::-webkit-scrollbar": {
+      width: ".3rem",
+      height: "4rem",
+    },
+    "body::-webkit-scrollbar-thumb": {
+      background: "secondary.100",
+      borderRadius: "2rem",
+    },
+    "body::-webkit-scrollbar-track": {},
 
     // "div::-webkit-scrollbar": {
     //   width: ".4rem",
