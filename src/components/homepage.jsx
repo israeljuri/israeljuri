@@ -24,7 +24,7 @@ const Homepage = () => {
         px="3"
         py="1"
         top="10"
-        left={{ base: "1", md: "10" }}
+        left={{ base: "5", md: "10" }}
         fontWeight="bold"
         bg="secondary.100"
         borderRadius="full"
