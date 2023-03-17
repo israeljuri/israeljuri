@@ -23,16 +23,15 @@ const Homepage = () => {
         position="fixed"
         px="3"
         py="1"
-        top="100"
-        transform="rotate(-90deg)"
-        left="1"
+        top="10"
+        left={{ base: "1", md: "10" }}
         fontWeight="bold"
         bg="secondary.100"
         borderRadius="full"
         gap="2"
       >
         <Icon as={FaHammer} />
-        <Text>30% in progress</Text>
+        <Text>30% </Text>
       </Center>
       <Center color="white" flexDirection="column">
         <Center
