@@ -40,6 +40,7 @@ const Homepage = () => {
           borderRadius="full"
           p="5"
           w="15rem"
+          h="15rem"
         >
           <Image src={avatar} />
         </Center>
@@ -51,7 +52,7 @@ const Homepage = () => {
       </Center>
 
       <CustomContainer>
-        <Center mt="10" gap="5" px="10" flexDirection="column" color="white">
+        <Center mt="4rem" gap="5" px="10" flexDirection="column" color="white">
           <Text maxW="70ch">
             Currently focused on building scalable, high-quality Frontend Web &
             Mobile applications using React and it’s ecosystem.
@@ -69,7 +70,7 @@ const Homepage = () => {
           </Text>
         </Center>
 
-        <Center mt="10" gap="5" fontSize="2xl" color="white">
+        <Center mt="4rem" gap="5" fontSize="2xl" color="white">
           <Link href="https://linkedin.com/in/isrealjuri">
             <Icon as={FaLinkedin} />
           </Link>
