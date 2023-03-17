@@ -25,7 +25,7 @@ const Homepage = () => {
         py="1"
         top="100"
         transform="rotate(-90deg)"
-        left="10"
+        left="1"
         fontWeight="bold"
         bg="secondary.100"
         borderRadius="full"
