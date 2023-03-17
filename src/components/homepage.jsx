@@ -1,15 +1,6 @@
-import {
-  Heading,
-  Flex,
-  Center,
-  Text,
-  Image,
-  Grid,
-  Icon,
-  Link,
-} from "@chakra-ui/react";
+import { Flex, Center, Text, Image, Icon, Link } from "@chakra-ui/react";
 import { BiMapPin } from "react-icons/bi";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaHammer, FaLinkedin, FaTwitter } from "react-icons/fa";
 import avatar from "../assets/avatar.png";
 import CustomContainer from "./common/customContainer";
 import bg from "../assets/bg.svg";
@@ -25,7 +16,23 @@ const Homepage = () => {
       direction="column"
       py="20"
       pt="10"
+      position="relative"
     >
+      <Center
+        color="white"
+        position="fixed"
+        px="3"
+        py="1"
+        top="10"
+        left="10"
+        fontWeight="bold"
+        bg="secondary.100"
+        borderRadius="full"
+        gap="2"
+      >
+        <Icon as={FaHammer} />
+        <Text>30% in progress</Text>
+      </Center>
       <Center color="white" flexDirection="column">
         <Center
           border="solid 3px"
@@ -44,8 +51,7 @@ const Homepage = () => {
       </Center>
 
       <CustomContainer>
-        <Center mt="20" gap="5" px="10" flexDirection="column" color="white">
-          {/* <Heading>👋 Israel Juri Here! </Heading> */}
+        <Center mt="10" gap="5" px="10" flexDirection="column" color="white">
           <Text maxW="70ch">
             Currently focused on building scalable, high-quality Frontend Web &
             Mobile applications using React and it’s ecosystem.
@@ -63,8 +69,8 @@ const Homepage = () => {
           </Text>
         </Center>
 
-        <Center mt="20" gap="5" fontSize="2xl" color="white">
-          <Link href="linkedin.com/in/isrealjuri">
+        <Center mt="10" gap="5" fontSize="2xl" color="white">
+          <Link href="https://linkedin.com/in/isrealjuri">
             <Icon as={FaLinkedin} />
           </Link>
           <Link href="https://twitter.com/israel_juri">
