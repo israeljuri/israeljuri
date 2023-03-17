@@ -1,6 +1,14 @@
 import { Flex, Center, Text, Image, Icon, Link } from "@chakra-ui/react";
 import { BiMapPin } from "react-icons/bi";
-import { FaGithub, FaHammer, FaLinkedin, FaTwitter } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaGithub,
+  FaHammer,
+  FaLinkedin,
+  FaPhone,
+  FaPhoneAlt,
+  FaTwitter,
+} from "react-icons/fa";
 import avatar from "../assets/avatar.png";
 import CustomContainer from "./common/customContainer";
 import bg from "../assets/bg.svg";
@@ -52,21 +60,20 @@ const Homepage = () => {
       </Center>
 
       <CustomContainer>
-        <Center mt="4rem" gap="5" px="10" flexDirection="column" color="white">
+        <Center mt="3rem" gap="5" px="10" flexDirection="column" color="white">
           <Text maxW="70ch">
             Currently focused on building scalable, high-quality Frontend Web &
             Mobile applications using React and it’s ecosystem.
           </Text>
 
           <Text maxW="70ch">
-            I believe Software Development is an art of problem solving while
-            considering vital factors.
+            I strongly believe Software Development is an art of problem solving
+            so i do my best to demonstrate that on projects.
           </Text>
 
           <Text maxW="70ch">
-            So i do my best to demonstrate that on projects by collaborating
-            with designers and picking optimal tools to bring about good
-            products.
+            Turning UI mockups into functional solutions, i blog by the side and
+            occassionaly solve leetcode problems to build logic.
           </Text>
         </Center>
 
@@ -79,6 +86,10 @@ const Homepage = () => {
           </Link>
           <Link href="https://github.com/israeljuri">
             <Icon as={FaGithub} />
+          </Link>
+
+          <Link href="mailto:israeljuri0@gmail.com">
+            <Icon as={FaEnvelope} />
           </Link>
         </Center>
       </CustomContainer>
