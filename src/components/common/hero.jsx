@@ -39,7 +39,7 @@ const Hero = () => {
                   Israel Juri
                 </Text>
                 , currently focused on building high-quality products using
-                React, React Native and their eco-system.
+                React, React-Native and their eco-system.
               </Text>
               {/* 
               <Text lineHeight="2" fontSize="lg" maxW="50ch">
