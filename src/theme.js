@@ -1,21 +1,18 @@
 import { extendTheme } from "@chakra-ui/react";
-import bg from "./assets/bg.svg";
 import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
 
 const colors = {
   primary: {
     100: "#000066",
-    200: "#0b0ba0",
   },
   secondary: {
     100: "#ff6600",
-    200: "#994209",
   },
 };
 
 const config = {
   initialColorMode: "light",
-  useSystemColorMode: false,
+  useSystemColorMode: true,
 };
 
 const fonts = {
@@ -25,31 +22,18 @@ const fonts = {
 
 const styles = {
   global: {
-    html: {
-      fontSize: "92%",
-      backgroundColor: " #000000",
-      backgroundImage: `url(${bg})`,
+    body: {
       scrollBehavior: "smooth",
     },
     "body::-webkit-scrollbar": {
       width: ".3rem",
-      height: "4rem",
+      height: ".3rem",
     },
     "body::-webkit-scrollbar-thumb": {
       background: "secondary.100",
       borderRadius: "2rem",
     },
     "body::-webkit-scrollbar-track": {},
-
-    // "div::-webkit-scrollbar": {
-    //   width: ".4rem",
-    //   height: "1rem",
-    // },
-    // "div::-webkit-scrollbar-thumb": {
-    //   background: "",
-    //   borderRadius: "0",
-    // },
-    // "div::-webkit-scrollbar-track": {},
   },
 };
 
@@ -75,21 +59,21 @@ export const buttonTheme = defineStyleConfig({
     lg: defineStyle({
       fontSize: "lg",
       px: "10",
-      py: "2rem",
-      borderRadius: "md",
+      py: "1.8rem",
+      borderRadius: "full",
     }),
 
     md: defineStyle({
       fontSize: "md",
-      px: "7",
-      py: "1.5rem",
-      borderRadius: "md",
+      px: "10",
+      py: "1.6rem",
+      borderRadius: "full",
     }),
     sm: defineStyle({
       fontSize: "xs",
       px: "5",
       py: "5",
-      borderRadius: "md",
+      borderRadius: "full",
     }),
   },
 });
