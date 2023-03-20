@@ -9,7 +9,7 @@ const Hero = () => {
     <Grid as="header">
       <CustomContainer>
         <Grid
-          py="20"
+          py={{ base: 1, md: 20 }}
           justifyContent="center"
           alignItems={{ base: "stretch", md: "stretch" }}
           templateColumns={{ base: "1fr", md: "2fr 1fr" }}
@@ -39,11 +39,11 @@ const Hero = () => {
                   Israel Juri
                 </Text>
                 , currently focused on building high-quality products using
-                React, React-Native and their eco-system.
+                React it's eco-system.
               </Text>
               {/* 
               <Text lineHeight="2" fontSize="lg" maxW="50ch">
-                I <LinkText label="blog" path="/blogs" /> about the intrinsic
+                I <LinkText label="write" path="/articles" /> about the intrinsic
                 parts of Programming and occasionally play around{" "}
                 <LinkText label="LeetCode" path="https://leetcode.com" /> 
               </Text> */}

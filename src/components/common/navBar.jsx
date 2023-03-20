@@ -83,20 +83,28 @@ const Navbar = () => {
           justify="space-between"
           gap="10"
         >
-          <Center
-            _hover={{
-              transform: "scale(1.1)",
-            }}
-            w="5rem"
-            as="figure"
-            borderRadius="full"
-            overflow="hidden"
-            transition=".2s"
-          >
-            <Image src={avatar} />
-          </Center>
+          <Hide below="md">
+            <Center
+              _hover={{
+                transform: "scale(1.1)",
+              }}
+              w="5rem"
+              as="figure"
+              borderRadius="full"
+              overflow="hidden"
+              transition=".2s"
+            >
+              <Image src={avatar} />
+            </Center>
+          </Hide>
 
-          <Flex gap="10" align="center">
+          <Flex
+            gap="10"
+            align="center"
+            justify="space-between"
+            w={{ base: "100%", md: "initial" }}
+            as="article"
+          >
             <Hide below="md">
               <Flex gap="10" as="ul">
                 {list.map((item) => renderLink(item))}
@@ -142,8 +150,6 @@ const Navbar = () => {
               </Show>
             )}
 
-            <ColorModeToggler />
-
             <Show below={"md"}>
               <Center
                 cursor="pointer"
@@ -156,6 +162,23 @@ const Navbar = () => {
                 <Icon as={FiMenu} />
               </Center>
             </Show>
+
+            <Show below="md">
+              <Center
+                _hover={{
+                  transform: "scale(1.1)",
+                }}
+                w="5rem"
+                as="figure"
+                borderRadius="full"
+                overflow="hidden"
+                transition=".2s"
+              >
+                <Image src={avatar} />
+              </Center>
+            </Show>
+
+            <ColorModeToggler />
           </Flex>
         </Flex>
       </CustomContainer>
