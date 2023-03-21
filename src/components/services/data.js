@@ -27,7 +27,7 @@ const information = {
 };
 
 const technologies = [
-  "Frontend-Products",
+  "Frontend Development",
   "Scalable Web & Mobile",
   "React & React Native",
   "TypeScript",

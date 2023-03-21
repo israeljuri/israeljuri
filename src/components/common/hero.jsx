@@ -94,7 +94,7 @@ const Hero = () => {
               <Heading
                 opacity={index % 2 === 0 ? ".5" : ".2"}
                 maxW="20ch"
-                fontWeight="normal"
+                // fontWeight="normal"
                 textTransform="capitalize"
                 size={{ base: "3xl", md: "3xl" }}
               >

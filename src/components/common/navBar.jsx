@@ -37,7 +37,7 @@ const NavBar = () => {
 
   const stickyNavbar = () => {
     if (window !== undefined)
-      window.scrollY > 500 ? setSticky(true) : setSticky(false);
+      window.scrollY > 200 ? setSticky(true) : setSticky(false);
   };
 
   const renderLink = (item) => {
