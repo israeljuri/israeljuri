@@ -14,7 +14,7 @@ import CustomContainer from "./customContainer";
 import avatar from "../../assets/avatar.png";
 import { useEffect, useState } from "react";
 import ColorModeToggler from "./colorModeToggler";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { getNavigationList } from "../services/data";
 import Socials from "./socials";
 
@@ -47,7 +47,7 @@ const NavBar = () => {
         as="li"
         key={item.id}
         color={getColor(item.path)}
-        fontSize={show ? "3xl" : "md"}
+        fontSize={show ? "2xl" : "md"}
         fontWeight="bold"
         transition=".2s"
         position="relative"
@@ -61,7 +61,7 @@ const NavBar = () => {
           left="0%"
           h="3px"
           borderRadius="full"
-          bg={colorMode === "light" ? "gray.800" : "white"}
+          bg={colorMode === "light" ? (show ? "white" : "gray.800") : "white"}
           w="100%"
         ></Box>
 
@@ -121,64 +121,56 @@ const NavBar = () => {
               </Flex>
             </Hide>
 
-            {show && (
-              <Show below="md" position="relative">
-                <Center
-                  cursor="pointer"
-                  h="3rem"
-                  w="3rem"
-                  position="fixed"
-                  right={10}
-                  fontSize="4xl"
-                  onClick={() => setShow(!show)}
-                  transition=".2s"
-                  zIndex="100"
-                  color="white"
-                >
-                  <Icon as={FiX} />
-                </Center>
+            <Flex
+              position="fixed"
+              as="ul"
+              top="0%"
+              left={show ? "0%" : "-100%"}
+              w="100%"
+              h="100%"
+              zIndex="4"
+              align="start"
+              justify="center"
+              px="14"
+              py="12"
+              transition=".2s"
+              direction="column"
+              bg="secondary.100"
+              gap="5"
+            >
+              <Center
+                mt="-10"
+                cursor="pointer"
+                h="3rem"
+                w="100%"
+                justifyContent="end"
+                right={10}
+                fontSize="3xl"
+                onClick={() => setShow(!show)}
+                transition=".2s"
+                zIndex="100"
+                color="white"
+              >
+                <Icon as={FiArrowLeft} />
+              </Center>
 
-                <Flex
-                  position="fixed"
-                  top="50%"
-                  w="100%"
-                  h="100%"
-                  zIndex="4"
-                  align="start"
-                  px="14"
-                  justify="center"
-                  py="12"
-                  left="50%"
-                  transform="translate(-50%, -50%)"
-                  direction="column"
-                  bg="secondary.100"
-                  gap="5"
-                  as="ul"
-                >
-                  {list.map((item) => renderLink(item))}
+              {list.map((item) => renderLink(item))}
 
-                  <Flex mt="10">
-                    <Socials
-                      size="2xl"
-                      color="white"
-                      col="repeat(5, 1fr)"
-                      gap="8"
-                    />
-                  </Flex>
-                </Flex>
-              </Show>
-            )}
+              <Flex mt="10">
+                <Socials size="xl" color="white" col="repeat(5, 1fr)" gap="5" />
+              </Flex>
+            </Flex>
 
             <Show below={"md"}>
               <Center
                 cursor="pointer"
                 h="3rem"
                 w="3rem"
-                fontSize="3xl"
+                fontSize="2xl"
                 onClick={() => setShow(!show)}
                 transition=".2s"
               >
-                <Icon as={FiMenu} />
+                <Icon as={FiArrowRight} />
               </Center>
             </Show>
 

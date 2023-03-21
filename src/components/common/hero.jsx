@@ -34,7 +34,7 @@ const Hero = () => {
                 lineHeight={{ base: "1.5", md: "1.2" }}
                 size={{ base: "3xl", md: "2xl" }}
               >
-                I Build Frontend Products&nbsp;that Scales&nbsp;on Web & Mobile.
+                I build frontend products&nbsp;that scales&nbsp;on Web & Mobile.
               </Heading>
 
               <Text lineHeight="2" fontSize="lg" maxW="50ch">
