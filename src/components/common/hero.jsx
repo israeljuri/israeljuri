@@ -40,14 +40,14 @@ const Hero = () => {
                 <Text as="span" color="secondary.100">
                   Israel
                 </Text>
-                , Currently i am focused on building high-quality applications
-                using React and it's eco-system.
+                , Specialized in building high-quality applications using React
+                and it's eco-system.
               </Text>
 
               <Text lineHeight="2" fontSize="lg" maxW="50ch">
                 I am a{" "}
                 <Text as="span" color="secondary.100">
-                  Frontend Developer
+                  Software Developer
                 </Text>{" "}
                 experienced in JavaScript, TypeScript and Java. I strongly
                 believe in problem solving, so I do my best to demonstrate this
@@ -95,8 +95,8 @@ const Hero = () => {
                 opacity={index % 2 === 0 ? ".5" : ".2"}
                 maxW="20ch"
                 // fontWeight="normal"
-                textTransform="capitalize"
-                size={{ base: "3xl", md: "3xl" }}
+                textTransform="uppercase"
+                size={{ base: "4xl", md: "4xl" }}
               >
                 {item}
               </Heading>

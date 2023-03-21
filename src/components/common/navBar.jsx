@@ -8,6 +8,7 @@ import {
   Hide,
   Box,
   useColorMode,
+  Heading,
 } from "@chakra-ui/react";
 import { useLocation, Link } from "react-router-dom";
 import CustomContainer from "./customContainer";
@@ -94,7 +95,7 @@ const NavBar = () => {
           gap="10"
         >
           <Hide below="md">
-            <Center
+            {/* <Center
               _hover={{
                 transform: "scale(1.1)",
               }}
@@ -105,7 +106,9 @@ const NavBar = () => {
               transition=".2s"
             >
               <Image src={avatar} />
-            </Center>
+            </Center> */}
+
+            <Heading> Israel Juri. </Heading>
           </Hide>
 
           <Flex

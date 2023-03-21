@@ -16,8 +16,8 @@ const config = {
 };
 
 const fonts = {
-  body: "sans-serif",
-  heading: "sans-serif",
+  body: "assistant",
+  heading: "assistant",
 };
 
 const styles = {
