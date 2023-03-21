@@ -14,11 +14,11 @@ import CustomContainer from "./customContainer";
 import avatar from "../../assets/avatar.png";
 import { useEffect, useState } from "react";
 import ColorModeToggler from "./colorModeToggler";
-import { FiMenu, FiX, FiDownload } from "react-icons/fi";
+import { FiMenu, FiX } from "react-icons/fi";
 import { getNavigationList } from "../services/data";
 import Socials from "./socials";
 
-const Navbar = () => {
+const NavBar = () => {
   const { colorMode } = useColorMode();
   const list = getNavigationList();
   const location = useLocation();
@@ -205,4 +205,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;

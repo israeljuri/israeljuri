@@ -1,12 +1,12 @@
 import { Grid } from "@chakra-ui/react";
 import Hero from "./common/hero";
-import Navbar from "./common/navbar";
+import NavBar from "./common/navBar";
 
 const Homepage = () => {
   return (
     <>
       <Grid minH="100vh">
-        <Navbar />
+        <NavBar />
         <Hero />
       </Grid>
     </>
