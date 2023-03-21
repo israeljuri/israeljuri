@@ -9,7 +9,8 @@ const Hero = () => {
     <Grid as="header">
       <CustomContainer>
         <Grid
-          py={{ base: 20, md: 20 }}
+          pt={{ base: 12, md: 20 }}
+          pb={{ base: 20, md: 20 }}
           justifyContent="center"
           alignItems={{ base: "stretch", md: "stretch" }}
           templateColumns={{ base: "1fr", md: "2fr 1fr" }}
@@ -29,7 +30,10 @@ const Hero = () => {
               textAlign={{ base: "center", md: "left" }}
               gap="8"
             >
-              <Heading lineHeight="1.2" size="2xl">
+              <Heading
+                lineHeight={{ base: "1.5", md: "1.2" }}
+                size={{ base: "3xl", md: "2xl" }}
+              >
                 I Build Frontend Products&nbsp;that Scales&nbsp;on Web & Mobile.
               </Heading>
 

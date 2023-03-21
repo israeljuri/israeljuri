@@ -16,10 +16,23 @@ const Socials = ({ size, col, row, gap, color }) => {
       id: 1,
       icon: FaLinkedin,
       path: information.linkedin,
+      custom: "",
       label: "LinkedIn",
     },
-    { id: 2, icon: FaTwitter, path: information.twitter, label: "Twitter" },
-    { id: 3, icon: FaGithub, path: information.github, label: "Github" },
+    {
+      id: 2,
+      icon: FaTwitter,
+      path: information.twitter,
+      label: "Twitter",
+      custom: "",
+    },
+    {
+      id: 3,
+      icon: FaGithub,
+      path: information.github,
+      label: "Github",
+      custom: "",
+    },
     {
       id: 4,
       icon: FaEnvelope,
@@ -45,7 +58,7 @@ const Socials = ({ size, col, row, gap, color }) => {
       templateRows={row}
     >
       {list.map((item) => (
-        <Link target="_blank" href={item?.custom + item.path}>
+        <Link target="_blank" href={item.custom + item.path}>
           <Icon as={item.icon} />
         </Link>
       ))}
