@@ -19,6 +19,9 @@ import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { getNavigationList } from "../services/data";
 import Socials from "./socials";
 
+import logo from "../../assets/logo.png";
+import element from "../../assets/element.svg";
+
 const NavBar = () => {
   const { colorMode } = useColorMode();
   const list = getNavigationList();
@@ -38,7 +41,7 @@ const NavBar = () => {
 
   const stickyNavbar = () => {
     if (window !== undefined)
-      window.scrollY > 100 ? setSticky(true) : setSticky(false);
+      window.scrollY > 500 ? setSticky(true) : setSticky(false);
   };
 
   const renderLink = (item) => {
@@ -81,6 +84,7 @@ const NavBar = () => {
     <Grid
       position={sticky ? "fixed" : "initial"}
       w="100%"
+      zIndex="10"
       transition=".2s"
       top={1}
       bg={colorMode === "light" ? "white" : "gray.800"}
@@ -98,25 +102,25 @@ const NavBar = () => {
           <Hide below="md">
             <Center gap="2">
               <Center
+                bg={`url(${element})`}
                 _hover={{
                   transform: "scale(1.1)",
                 }}
                 w="3rem"
+                h="3rem"
+                p="2.5"
                 as="figure"
                 borderRadius="full"
                 overflow="hidden"
                 transition=".2s"
-                filter={
-                  colorMode === "light" ? "grayscale(0)" : "grayscale(10)"
-                }
               >
-                <Image src={avatar} />
+                <Image src={logo} />
               </Center>
             </Center>
           </Hide>
 
           <Flex
-            gap="10"
+            // gap="10"
             align="center"
             justify="space-between"
             w={{ base: "100%", md: "initial" }}
@@ -178,6 +182,24 @@ const NavBar = () => {
                 transition=".2s"
               >
                 <Icon as={FiArrowRight} />
+              </Center>
+            </Show>
+
+            <Show below="md">
+              <Center
+                bg={`url(${element})`}
+                _hover={{
+                  transform: "scale(1.1)",
+                }}
+                w="3rem"
+                h="3rem"
+                p="2.5"
+                as="figure"
+                borderRadius="full"
+                overflow="hidden"
+                transition=".2s"
+              >
+                <Image src={logo} />
               </Center>
             </Show>
 

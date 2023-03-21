@@ -14,7 +14,15 @@ const ScrollIndiator = () => {
   };
 
   return (
-    <Flex position="fixed" top={0} left={0} w="100%" minH="4px" bg="gray.100">
+    <Flex
+      zIndex="10"
+      position="fixed"
+      top={0}
+      left={0}
+      w="100%"
+      minH="4px"
+      bg="gray.100"
+    >
       <Box bg="secondary.100" borderRadius="full" w={percentage + "%"}></Box>
     </Flex>
   );

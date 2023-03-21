@@ -14,6 +14,7 @@ import LinkText from "./linkText";
 
 import avatar from "../../assets/avatar-2.png";
 import element from "../../assets/element.svg";
+import ColorText from "./colorText";
 
 const Hero = () => {
   const { colorMode } = useColorMode();
@@ -21,45 +22,26 @@ const Hero = () => {
     <Grid as="header">
       <CustomContainer>
         <Grid
-          pt={{ base: 12, md: 20 }}
-          pb={{ base: 20, md: 20 }}
-          justifyContent="center"
-          alignItems={{ base: "stretch", md: "stretch" }}
-          templateColumns={{ base: "1fr", md: "1.5fr 1fr" }}
-          gap={{ base: "10", md: 0 }}
+          py={{ base: 10, md: 0 }}
+          gap={{ base: 10, md: 0 }}
+          templateColumns={{ base: "1fr", md: "1fr 1fr" }}
         >
           <Flex
             order={{ base: 2, md: 1 }}
             as="article"
             direction="column"
-            align={{ base: "center", md: "stretch" }}
-            justify={{ base: "center", md: "center" }}
-            textAlign={{ base: "center", md: "left" }}
+            justify="center"
             gap="10"
           >
-            <Flex
-              as="article"
-              direction="column"
-              align={{ base: "center", md: "stretch" }}
-              textAlign={{ base: "center", md: "left" }}
-              gap="8"
-            >
-              <Heading maxW="20ch" size={{ base: "2xl", md: "3xl" }}>
+            <Flex as="article" direction="column">
+              <Heading mb="10" size={{ base: "xl", md: "xl" }} maxW="30ch">
                 I Build Frontend Products that Scales on Web & Mobile.
               </Heading>
-              <Text lineHeight="2" fontSize="lg" maxW="50ch">
-                Hi 👋 it's{" "}
-                <Text as="span" color="secondary.100">
-                  Israel
-                </Text>
-                , Currently i am focused on building high-quality applications
-                using React and it's eco-system.
-              </Text>
 
               <Text lineHeight="2" fontSize="lg" maxW="50ch">
-                But I am a Frontend Developer experienced in JavaScript,
-                TypeScript and Java. I strongly believe in problem solving, so I
-                do my best to demonstrate this in my Works.
+                Currently i am focused on building high-quality{" "}
+                <ColorText>Frontend applications</ColorText> using{" "}
+                <ColorText>React</ColorText> and it's eco-system.
               </Text>
 
               <Text lineHeight="2" fontSize="lg" maxW="50ch">
@@ -89,23 +71,29 @@ const Hero = () => {
           </Flex>
 
           <Flex
-            align={{ base: "center", md: "start" }}
-            justify={{ base: "center", md: "start" }}
+            align="start"
+            justify={{ base: "start", md: "center" }}
             order={{ base: 1, md: 2 }}
           >
             <Center
+              bg={`url(${element})`}
+              h={{ base: "12rem", md: "22rem" }}
+              w={{ base: "12rem", md: "22rem" }}
               borderRadius="md"
               overflow="hidden"
-              h={{ base: "15rem", md: "20rem" }}
-              w={{ base: "15rem", md: "20rem" }}
-              bg={`url(${element})`}
+              _hover={{ div: { transform: "rotate(360deg)" } }}
             >
-              <Image
-                filter={
-                  colorMode === "light" ? "grayscale(0)" : "grayscale(10)"
-                }
-                src={avatar}
-              />
+              <Center
+                transition="5s"
+                boxShadow="0 3rem 5rem rgba(0,0,0, .5)"
+                w={{ base: "8rem", md: "15rem" }}
+                h={{ base: "8rem", md: "15rem" }}
+                bg="white"
+                overflow="hidden"
+                borderRadius="full"
+              >
+                <Image filter="grayscale(10) contrast(1)" src={avatar} />
+              </Center>
             </Center>
           </Flex>
         </Grid>

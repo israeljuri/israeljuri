@@ -1,4 +1,5 @@
 import { Grid } from "@chakra-ui/react";
+import Tools from "./common/tools";
 import Hero from "./common/hero";
 import NavBar from "./common/navBar";
 
@@ -9,6 +10,7 @@ const Homepage = () => {
         <NavBar />
         <Hero />
       </Grid>
+      <Tools />
     </>
   );
 };
