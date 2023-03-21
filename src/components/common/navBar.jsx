@@ -38,7 +38,7 @@ const NavBar = () => {
 
   const stickyNavbar = () => {
     if (window !== undefined)
-      window.scrollY > 200 ? setSticky(true) : setSticky(false);
+      window.scrollY > 100 ? setSticky(true) : setSticky(false);
   };
 
   const renderLink = (item) => {
@@ -60,7 +60,7 @@ const NavBar = () => {
           opacity={show && currentPath === item.path ? "1" : "0"}
           top="100%"
           left="0%"
-          h="2px"
+          h="3px"
           borderRadius="full"
           bg={colorMode === "light" ? (show ? "white" : "gray.800") : "white"}
           w="100%"
@@ -81,6 +81,7 @@ const NavBar = () => {
     <Grid
       position={sticky ? "fixed" : "initial"}
       w="100%"
+      transition=".2s"
       top={1}
       bg={colorMode === "light" ? "white" : "gray.800"}
       boxShadow={sticky && (colorMode === "light" ? "base" : "lg")}
@@ -89,26 +90,29 @@ const NavBar = () => {
         <Flex
           py={sticky ? 3 : 8}
           pb={sticky ? 3 : 0}
-          minH="4rem"
+          minH="5rem"
           align="center"
           justify="space-between"
           gap="10"
         >
           <Hide below="md">
-            {/* <Center
-              _hover={{
-                transform: "scale(1.1)",
-              }}
-              w="5rem"
-              as="figure"
-              borderRadius="full"
-              overflow="hidden"
-              transition=".2s"
-            >
-              <Image src={avatar} />
-            </Center> */}
-
-            <Heading> Israel Juri. </Heading>
+            <Center gap="2">
+              <Center
+                _hover={{
+                  transform: "scale(1.1)",
+                }}
+                w="3rem"
+                as="figure"
+                borderRadius="full"
+                overflow="hidden"
+                transition=".2s"
+                filter={
+                  colorMode === "light" ? "grayscale(0)" : "grayscale(10)"
+                }
+              >
+                <Image src={avatar} />
+              </Center>
+            </Center>
           </Hide>
 
           <Flex
@@ -174,21 +178,6 @@ const NavBar = () => {
                 transition=".2s"
               >
                 <Icon as={FiArrowRight} />
-              </Center>
-            </Show>
-
-            <Show below="md">
-              <Center
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-                w="5rem"
-                as="figure"
-                borderRadius="full"
-                overflow="hidden"
-                transition=".2s"
-              >
-                <Image src={avatar} />
               </Center>
             </Show>
 

@@ -5,13 +5,25 @@ const ColorModeToggler = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Center as="li" fontSize={{ base: "xl", md: "xl" }}>
+    <Center ml="5" as="li" fontSize={{ base: "xl", md: "xl" }}>
       {colorMode === "light" ? (
-        <Center h="3rem" w="3rem" cursor="pointer" onClick={toggleColorMode}>
+        <Center
+          h="3rem"
+          w="3rem"
+          gap="2"
+          cursor="pointer"
+          onClick={toggleColorMode}
+        >
           <Icon as={FaMoon} />
         </Center>
       ) : (
-        <Center h="3rem" w="3rem" cursor="pointer" onClick={toggleColorMode}>
+        <Center
+          h="3rem"
+          w="3rem"
+          gap="2"
+          cursor="pointer"
+          onClick={toggleColorMode}
+        >
           <Icon as={FaSun} />
         </Center>
       )}

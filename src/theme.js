@@ -6,7 +6,7 @@ const colors = {
     100: "#000066",
   },
   secondary: {
-    100: "#ff6600",
+    100: "#00BB77",
   },
 };
 
@@ -16,8 +16,8 @@ const config = {
 };
 
 const fonts = {
-  body: "assistant",
-  heading: "assistant",
+  body: "sans-serif",
+  heading: "sans-serif",
 };
 
 const styles = {
@@ -34,15 +34,6 @@ const styles = {
       borderRadius: "2rem",
     },
     "body::-webkit-scrollbar-track": {},
-    "div::-webkit-scrollbar": {
-      width: ".4rem",
-      height: "1rem",
-    },
-    "div::-webkit-scrollbar-thumb": {
-      background: "",
-      borderRadius: "0",
-    },
-    "div::-webkit-scrollbar-track": {},
   },
 };
 
