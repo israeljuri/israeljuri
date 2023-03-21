@@ -1,5 +1,7 @@
 import { Grid, Flex, Heading, Text } from "@chakra-ui/react";
 import CustomContainer from "./common/customContainer";
+import CustomLink from "./common/customLink";
+import { BiHome } from "react-icons/bi";
 
 const NotFound = () => {
   return (
@@ -14,11 +16,11 @@ const NotFound = () => {
           gap="5"
           pt={{ base: 0, md: "10rem" }}
         >
-          <Heading fontSize="10rem">404</Heading>
+          <Heading size="3xl">😒 Not found</Heading>
           <Text mb="5" fontSize="xl" maxW="70ch" lineHeight="1.5">
-            The page you're looking for cannot be found, or is under
-            development.
+            The page you're looking for cannot be found.
           </Text>
+          <CustomLink label="Go home" path="/" icon={BiHome} />
         </Flex>
       </CustomContainer>
     </Grid>

@@ -2,7 +2,6 @@ import {
   Grid,
   Center,
   Image,
-  Link,
   Flex,
   Icon,
   Show,
@@ -10,24 +9,22 @@ import {
   Box,
   useColorMode,
 } from "@chakra-ui/react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import CustomContainer from "./customContainer";
 import avatar from "../../assets/avatar.png";
 import { useEffect, useState } from "react";
 import ColorModeToggler from "./colorModeToggler";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiMenu, FiX, FiDownload } from "react-icons/fi";
 import { getNavigationList } from "../services/data";
+import Socials from "./socials";
 
 const Navbar = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
   const list = getNavigationList();
   const location = useLocation();
   const [currentPath] = useState(location.pathname);
   const [show, setShow] = useState(false);
   const [sticky, setSticky] = useState(false);
-
-  const getBorder = (path) =>
-    currentPath === path ? show && "dotted 2px" : "none";
 
   const getColor = (path) =>
     currentPath === path
@@ -52,9 +49,22 @@ const Navbar = () => {
         color={getColor(item.path)}
         fontSize={show ? "3xl" : "md"}
         fontWeight="bold"
-        borderBottom={getBorder(item.path)}
-        borderColor={show ? "white" : "secondary.100"}
+        transition=".2s"
+        position="relative"
+        _hover={{ div: { opacity: "1" } }}
       >
+        <Box
+          transition=".2s"
+          position="absolute"
+          opacity={show && currentPath === item.path ? "1" : "0"}
+          top="100%"
+          left="0%"
+          h="3px"
+          borderRadius="full"
+          bg={colorMode === "light" ? "gray.800" : "white"}
+          w="100%"
+        ></Box>
+
         <Link to={item.path}>{item.label}</Link>
       </Flex>
     );
@@ -135,7 +145,7 @@ const Navbar = () => {
                   h="100%"
                   zIndex="4"
                   align="start"
-                  px="20"
+                  px="14"
                   justify="center"
                   py="12"
                   left="50%"
@@ -146,6 +156,15 @@ const Navbar = () => {
                   as="ul"
                 >
                   {list.map((item) => renderLink(item))}
+
+                  <Flex mt="10">
+                    <Socials
+                      size="2xl"
+                      color="white"
+                      col="repeat(5, 1fr)"
+                      gap="8"
+                    />
+                  </Flex>
                 </Flex>
               </Show>
             )}

@@ -1,5 +1,5 @@
 {
-  "name": "threshold-educational-services-creativity-academy",
+  "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,11 +10,11 @@
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.16",
-    "recoil": "^0.7.6",
-    "yup": "^0.32.11",
+    // "recoil": "^0.7.6",
+    // "yup": "^0.32.11",
     "react-router-dom": "^6.6.2",
     "react-icons": "^4.7.1",
-    "formik": "^2.2.9",
+    // "formik": "^2.2.9",
     "@rehooks/document-title": "^1.0.2",
     "@chakra-ui/react": "^2.4.8",
     "@emotion/react": "^11.10.5",

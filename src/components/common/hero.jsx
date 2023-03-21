@@ -9,7 +9,7 @@ const Hero = () => {
     <Grid as="header">
       <CustomContainer>
         <Grid
-          py={{ base: 1, md: 20 }}
+          py={{ base: 20, md: 20 }}
           justifyContent="center"
           alignItems={{ base: "stretch", md: "stretch" }}
           templateColumns={{ base: "1fr", md: "2fr 1fr" }}
@@ -34,19 +34,29 @@ const Hero = () => {
               </Heading>
 
               <Text lineHeight="2" fontSize="lg" maxW="50ch">
-                I'm{" "}
+                Hi 👋 it's{" "}
                 <Text as="span" color="secondary.100">
-                  Israel Juri
+                  Israel
                 </Text>
-                , currently focused on building high-quality products using
-                React it's eco-system.
+                , Currently i am focused on building high-quality applications
+                using React and it's eco-system.
               </Text>
-              {/* 
-              <Text lineHeight="2" fontSize="lg" maxW="50ch">
-                I <LinkText label="write" path="/articles" /> about the intrinsic
-                parts of Programming and occasionally play around{" "}
-                <LinkText label="LeetCode" path="https://leetcode.com" /> 
-              </Text> */}
+
+              {/* <Text lineHeight="2" fontSize="lg" maxW="50ch">
+                  I also <LinkText label="write" path="/articles" /> about the
+                  intrinsic parts of Programming and occasionally play around{" "}
+                  <LinkText
+                    label="LeetCode"
+                    target="_blank"
+                    to="https://leetcode.com"
+                  />
+                </Text>
+
+                <Text lineHeight="2" fontSize="lg" maxW="50ch">
+                  But I am a Frontend Developer experienced in JavaScript,
+                  TypeScript and Java. I strongly believe in problem solving, so
+                  I do my best to demonstrate this in my Works.
+                </Text> */}
             </Flex>
 
             <Grid
