@@ -34,6 +34,15 @@ const styles = {
       borderRadius: "2rem",
     },
     "body::-webkit-scrollbar-track": {},
+    "div::-webkit-scrollbar": {
+      width: ".4rem",
+      height: "1rem",
+    },
+    "div::-webkit-scrollbar-thumb": {
+      background: "",
+      borderRadius: "0",
+    },
+    "div::-webkit-scrollbar-track": {},
   },
 };
 

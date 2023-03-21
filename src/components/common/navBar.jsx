@@ -47,7 +47,7 @@ const NavBar = () => {
         as="li"
         key={item.id}
         color={getColor(item.path)}
-        fontSize={show ? "2xl" : "md"}
+        fontSize={show ? "2xl" : "sm"}
         fontWeight="bold"
         transition=".2s"
         position="relative"
@@ -59,7 +59,7 @@ const NavBar = () => {
           opacity={show && currentPath === item.path ? "1" : "0"}
           top="100%"
           left="0%"
-          h="3px"
+          h="2px"
           borderRadius="full"
           bg={colorMode === "light" ? (show ? "white" : "gray.800") : "white"}
           w="100%"
@@ -88,7 +88,7 @@ const NavBar = () => {
         <Flex
           py={sticky ? 3 : 8}
           pb={sticky ? 3 : 0}
-          minH="5rem"
+          minH="4rem"
           align="center"
           justify="space-between"
           gap="10"

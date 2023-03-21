@@ -1,19 +1,24 @@
-import { Flex, Heading, Text, Grid } from "@chakra-ui/react";
+import { Flex, Heading, Text, Grid, Image, Center } from "@chakra-ui/react";
 import CustomContainer from "../common/customContainer";
 import { FaHammer, FaReadme } from "react-icons/fa";
 import CustomLink from "./customLink";
+import avatar from "../../assets/avatar.png";
 import LinkText from "./linkText";
+import { getTechnologies } from "../services/data";
 
 const Hero = () => {
+  const technologies = getTechnologies();
   return (
     <Grid as="header">
       <CustomContainer>
         <Grid
-          pt={{ base: 12, md: 20 }}
-          pb={{ base: 20, md: 20 }}
+          // pt={{ base: 12, md: 20 }}
+          // pb={{ base: 20, md: 20 }}
+          gap="10"
+          py="5"
           justifyContent="center"
-          alignItems={{ base: "stretch", md: "stretch" }}
-          templateColumns={{ base: "1fr", md: "2fr 1fr" }}
+          alignItems={{ base: "center", md: "stretch" }}
+          templateColumns={{ base: "1fr", md: "1fr 1fr" }}
         >
           <Flex
             as="article"
@@ -30,13 +35,6 @@ const Hero = () => {
               textAlign={{ base: "center", md: "left" }}
               gap="8"
             >
-              <Heading
-                lineHeight={{ base: "1.5", md: "1.2" }}
-                size={{ base: "3xl", md: "2xl" }}
-              >
-                I build frontend products&nbsp;that scales&nbsp;on Web & Mobile.
-              </Heading>
-
               <Text lineHeight="2" fontSize="lg" maxW="50ch">
                 Hi 👋 it's{" "}
                 <Text as="span" color="secondary.100">
@@ -46,21 +44,25 @@ const Hero = () => {
                 using React and it's eco-system.
               </Text>
 
-              {/* <Text lineHeight="2" fontSize="lg" maxW="50ch">
-                  I also <LinkText label="write" path="/articles" /> about the
-                  intrinsic parts of Programming and occasionally play around{" "}
-                  <LinkText
-                    label="LeetCode"
-                    target="_blank"
-                    to="https://leetcode.com"
-                  />
-                </Text>
+              <Text lineHeight="2" fontSize="lg" maxW="50ch">
+                I am a{" "}
+                <Text as="span" color="secondary.100">
+                  Frontend Developer
+                </Text>{" "}
+                experienced in JavaScript, TypeScript and Java. I strongly
+                believe in problem solving, so I do my best to demonstrate this
+                in my Works.
+              </Text>
 
-                <Text lineHeight="2" fontSize="lg" maxW="50ch">
-                  But I am a Frontend Developer experienced in JavaScript,
-                  TypeScript and Java. I strongly believe in problem solving, so
-                  I do my best to demonstrate this in my Works.
-                </Text> */}
+              <Text lineHeight="2" fontSize="lg" maxW="50ch">
+                I also <LinkText label="write" path="/articles" /> about the
+                intrinsic parts of Programming and occasionally play around{" "}
+                <LinkText
+                  label="LeetCode"
+                  target="_blank"
+                  to="https://leetcode.com"
+                />
+              </Text>
             </Flex>
 
             <Grid
@@ -76,6 +78,29 @@ const Hero = () => {
 
               <CustomLink label="Latest Article" path="/blog" icon={FaReadme} />
             </Grid>
+          </Flex>
+
+          <Flex
+            h={{ base: "15rem", md: "25rem" }}
+            overflowY="scroll"
+            direction="column"
+            align={{ base: "center", md: "stretch" }}
+            textAlign={{ base: "center", md: "left" }}
+            justify="start"
+
+            // gap="5"
+          >
+            {technologies.map((item, index) => (
+              <Heading
+                opacity={index % 2 === 0 ? ".5" : ".2"}
+                maxW="20ch"
+                fontWeight="normal"
+                textTransform="capitalize"
+                size={{ base: "3xl", md: "3xl" }}
+              >
+                {item}
+              </Heading>
+            ))}
           </Flex>
         </Grid>
       </CustomContainer>
