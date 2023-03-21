@@ -33,8 +33,8 @@ const Hero = () => {
             justify="center"
             gap="10"
           >
-            <Flex as="article" direction="column">
-              <Heading mb="10" size={{ base: "xl", md: "xl" }} maxW="30ch">
+            <Flex as="article" direction="column" gap="5">
+              <Heading mb="5" size={{ base: "xl", md: "xl" }} maxW="30ch">
                 I Build Frontend Products that Scales on Web & Mobile.
               </Heading>
 

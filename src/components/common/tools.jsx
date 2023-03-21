@@ -8,7 +8,7 @@ const Tools = () => {
   return (
     <Grid>
       <CustomContainer>
-        <Grid py="20">
+        <Grid py="20" mb="20">
           <Flex gap="5" direction="column">
             <Heading size="lg">Briefly</Heading>
             <Text maxW="50ch" lineHeight="1.5">
@@ -21,8 +21,8 @@ const Tools = () => {
               OOP etc.)
             </Text>
             <Text maxW="50ch" lineHeight="1.5">
-              Which as made me capable of picking up technologies and tools
-              without the hassle.
+              Making me capable of picking up technologies and tools without the
+              hassle.
             </Text>
           </Flex>
         </Grid>
