@@ -11,6 +11,7 @@ import CustomContainer from "../common/customContainer";
 import { FaHammer, FaReadme } from "react-icons/fa";
 import CustomLink from "./customLink";
 import ColorText from "./colorText";
+import LinkText from "./linkText";
 
 const Hero = () => {
   const { colorMode } = useColorMode();
@@ -33,18 +34,24 @@ const Hero = () => {
               <Heading
                 mb="5"
                 fontWeight="600"
-                size={{ base: "2xl", md: "2xl" }}
-                maxW="25ch"
+                size={{ base: "3xl", md: "2xl" }}
+                maxW="20ch"
               >
-                I build the <ColorText>frontend</ColorText> of products on web
-                and mobile.
+                I Build the <ColorText>Frontend</ColorText> of Products on Web
+                and Mobile.
               </Heading>
 
               <Text lineHeight="2" fontSize="lg" maxW="50ch">
-                I am <ColorText fontWeight="500">Israel Juri</ColorText>,{" "}
-                Currently I'm focused on turning mockups into high-quality{" "}
+                I'm <ColorText fontWeight="500">Israel Juri</ColorText>,{" "}
+                Currently focused on turning mockups into high-quality{" "}
                 <ColorText>applications</ColorText> using{" "}
                 <ColorText>React</ColorText> and it's eco-system.
+              </Text>
+              <Text lineHeight="2" fontSize="lg" maxW="50ch">
+                I also <LinkText label="Write" path="" target="_blank" /> about
+                the intrinsic parts of Programming, and playaround{" "}
+                <LinkText label="LeetCode" path="" target="_blank" /> in my free
+                time.
               </Text>
             </Flex>
 
