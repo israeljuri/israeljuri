@@ -16,8 +16,8 @@ const config = {
 };
 
 const fonts = {
-  body: "sans-serif",
-  heading: "sans-serif",
+  body: "Fira Sans",
+  heading: "Fira Sans",
 };
 
 const styles = {

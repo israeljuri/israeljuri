@@ -9,6 +9,7 @@ const CustomLink = ({ icon, label, path }) => {
       _hover={{ borderColor: "secondary.100" }}
       borderBottom="dotted 1px"
       fontSize="lg"
+      fontFamily="Fira Mono"
     >
       <Link to={path} fontWeight="bold">
         {label}

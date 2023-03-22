@@ -7,20 +7,19 @@ import {
   Show,
   Hide,
   Box,
+  Text,
   useColorMode,
-  Heading,
 } from "@chakra-ui/react";
 import { useLocation, Link } from "react-router-dom";
-import CustomContainer from "./customContainer";
-import avatar from "../../assets/avatar.png";
 import { useEffect, useState } from "react";
-import ColorModeToggler from "./colorModeToggler";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { getNavigationList } from "../services/data";
-import Socials from "./socials";
 
 import logo from "../../assets/logo.png";
 import element from "../../assets/element.svg";
+import ColorModeToggler from "./colorModeToggler";
+import CustomContainer from "./customContainer";
+import Socials from "./socials";
 
 const NavBar = () => {
   const { colorMode } = useColorMode();
@@ -44,15 +43,17 @@ const NavBar = () => {
       window.scrollY > 500 ? setSticky(true) : setSticky(false);
   };
 
-  const renderLink = (item) => {
+  const renderLink = (item, index) => {
     return (
       <Flex
         py="2"
+        gap="1"
         as="li"
         key={item.id}
         color={getColor(item.path)}
         fontSize={show ? "2xl" : "sm"}
         fontWeight="bold"
+        fontFamily="Fira Mono"
         transition=".2s"
         position="relative"
         _hover={{ div: { opacity: "1" } }}
@@ -69,6 +70,9 @@ const NavBar = () => {
           w="100%"
         ></Box>
 
+        <Text fontFamily="Fira Mono" color={show ? "white" : "secondary.100"}>
+          {index}.
+        </Text>
         <Link to={item.path}>{item.label}</Link>
       </Flex>
     );
@@ -128,7 +132,7 @@ const NavBar = () => {
           >
             <Hide below="md">
               <Flex gap="10" as="ul">
-                {list.map((item) => renderLink(item))}
+                {list.map((item, index) => renderLink(item, index))}
               </Flex>
             </Hide>
 
@@ -165,7 +169,7 @@ const NavBar = () => {
                 <Icon as={FiArrowLeft} />
               </Center>
 
-              {list.map((item) => renderLink(item))}
+              {list.map((item, index) => renderLink(item, index))}
 
               <Flex mt="10">
                 <Socials size="xl" color="white" col="repeat(5, 1fr)" gap="5" />

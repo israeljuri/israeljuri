@@ -1,8 +1,8 @@
 import { Text } from "@chakra-ui/react";
 
-const ColorText = ({ children }) => {
+const ColorText = ({ children, fontWeight }) => {
   return (
-    <Text as="span" color="secondary.100">
+    <Text as="span" fontWeight={fontWeight} color="secondary.100">
       {children}
     </Text>
   );
