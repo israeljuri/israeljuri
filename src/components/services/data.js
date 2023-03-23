@@ -40,12 +40,15 @@ const recentTechnologies = [
   "Git",
 ];
 
+import theraswiftImage from "../../assets/experience/theraswift.png";
+import technovilleImg from "../../assets/experience/technoville.jpg";
+
 const experiences = [
   {
     id: 1,
     company: "Technoville",
     role: "Volunteer Software Developer",
-    img: "",
+    img: technovilleImg,
     brief:
       "Technoville is building the Next Generation of Innovators in Rivers State, Nigeria.",
     startDate: "January 2022",
@@ -61,7 +64,7 @@ const experiences = [
     id: 2,
     company: "ThreaSwift RX",
     role: "Frontend Developer",
-    img: "",
+    img: theraswiftImage,
     brief:
       "Start up in Lagos, Nigeria. with a goal of making Pharmaceutical services accessible",
     startDate: "January 2021",

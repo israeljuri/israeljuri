@@ -33,7 +33,15 @@ const Hero = () => {
                   size={{ base: "3xl", md: "4xl" }}
                   maxW={{ base: "20ch", md: "25ch" }}
                 >
-                  I am Israel Juri👋
+                  I am Israel Juri
+                </Heading>
+                <Heading
+                  order={{ base: 1, md: 2 }}
+                  fontWeight="600"
+                  size={{ base: "3xl", md: "4xl" }}
+                  maxW={{ base: "20ch", md: "25ch" }}
+                >
+                  👋
                 </Heading>
               </Flex>
 
