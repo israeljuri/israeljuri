@@ -58,7 +58,7 @@ const Socials = ({ size, col, row, gap, color }) => {
       templateRows={row}
     >
       {list.map((item) => (
-        <Link target="_blank" href={item.custom + item.path}>
+        <Link key={item.id} target="_blank" href={item.custom + item.path}>
           <Icon as={item.icon} />
         </Link>
       ))}

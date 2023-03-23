@@ -8,8 +8,8 @@ const ColorModeToggler = () => {
     <Center ml="5" as="li" fontSize={{ base: "xl", md: "xl" }}>
       {colorMode === "light" ? (
         <Center
-          h="3rem"
-          w="3rem"
+          // h="3rem"
+          // w="3rem"
           gap="2"
           cursor="pointer"
           onClick={toggleColorMode}

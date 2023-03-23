@@ -13,10 +13,15 @@ import avatar from "../../assets/avatar-2.png";
 import element from "../../assets/element.svg";
 import Socials from "./socials";
 import { BiTargetLock } from "react-icons/bi";
+import LinkText from "./linkText";
+import { FaCaretRight } from "react-icons/fa";
+import { getRecentTechnologies } from "../services/data";
 
-const AboutComponent = () => {
+const About = () => {
+  const recentTechnologies = getRecentTechnologies();
+
   return (
-    <Grid>
+    <Grid id="#about">
       <CustomContainer>
         <Grid
           py="10"
@@ -24,18 +29,48 @@ const AboutComponent = () => {
           gap={{ base: "10", md: "20" }}
           templateColumns={{ base: "1fr", md: "max-content max-content" }}
         >
-          <Flex order={{ base: 2, md: 1 }} gap="5" direction="column">
+          <Flex order={{ base: 2, md: 1 }} gap="10" direction="column">
             <Heading size="xl">About Me</Heading>
             <Text maxW="50ch" lineHeight="1.5">
               I Strongly believe Software Development is an art of Problem
-              Solving. This made me invest in building a{" "}
+              Solving so I'm keen on how to deliver value.
+            </Text>
+            <Text maxW="50ch" lineHeight="1.5">
+              This made me invest in building a{" "}
               <ColorText>solid foundation</ColorText> in Computer Science
               Concepts{" "}
               <ColorText>
                 (Data Structures, Algorithms, Design Patterns, OOP etc.)
               </ColorText>{" "}
-              picking up technologies and tools happens without the hassle.
             </Text>
+            <Text maxW="50ch" lineHeight="1.5">
+              I am currently voluteering{" "}
+              <LinkText
+                label="@techovillehq"
+                path="https://technovillehq.com"
+              />{" "}
+              but I'm{" "}
+              <ColorText>open to opportunities and collaborations</ColorText>.
+              Aiming to work with a passionate team looking to add value to
+              people by creating products.
+            </Text>
+            <Text maxW="50ch" lineHeight="1.5">
+              Here are some technologies I've been working with recently:
+            </Text>
+
+            <Grid
+              templateColumns="max-content max-content"
+              columnGap="5"
+              rowGap="2"
+              fontFamily="Fira Mono"
+            >
+              {recentTechnologies.map((tech) => (
+                <Flex key={tech} gap="2" align="center">
+                  <Icon color="secondary.100" as={FaCaretRight} />{" "}
+                  <Text>{tech}</Text>
+                </Flex>
+              ))}
+            </Grid>
           </Flex>
 
           <Flex
@@ -62,7 +97,7 @@ const AboutComponent = () => {
             </Center>
             <Flex mt="3" align="center" gap="1">
               <Icon color="secondary.100" as={BiTargetLock} />
-              <Text>Lagos, Nigeria.</Text>
+              <Text fontFamily="Fira Mono">Lagos, Nigeria.</Text>
             </Flex>
             <Socials col="repeat(5, 1fr)" size="1.3rem" gap="3" />
           </Flex>
@@ -72,4 +107,4 @@ const AboutComponent = () => {
   );
 };
 
-export default AboutComponent;
+export default About;

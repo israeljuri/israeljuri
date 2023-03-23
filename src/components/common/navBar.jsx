@@ -9,13 +9,14 @@ import {
   Box,
   Text,
   useColorMode,
+  Link,
 } from "@chakra-ui/react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { getNavigationList } from "../services/data";
 
-import logo from "../../assets/logo.png";
+import logo from "../../assets/avatar-2.png";
 import element from "../../assets/element.svg";
 import ColorModeToggler from "./colorModeToggler";
 import CustomContainer from "./customContainer";
@@ -70,10 +71,10 @@ const NavBar = () => {
           w="100%"
         ></Box>
 
-        <Text fontFamily="Fira Mono" color={show ? "white" : "secondary.100"}>
+        {/* <Text fontFamily="Fira Mono" color={show ? "white" : "secondary.100"}>
           {index}.
-        </Text>
-        <Link to={item.path}>{item.label}</Link>
+        </Text> */}
+        <Link href={item.path}>{item.label}</Link>
       </Flex>
     );
   };
@@ -104,7 +105,38 @@ const NavBar = () => {
           gap="10"
         >
           <Hide below="md">
-            <Center gap="2">
+            <Center gap="2" position="relative">
+              {/* <Flex
+                position="absolute"
+                top="50%"
+                left="125%"
+                // w="3.5rem"
+                textAlign="center"
+                borderRadius="full"
+                transform="translateY(-50%)"
+                bg="white"
+                px="3"
+                py="1"
+                fontSize="sm"
+                zIndex="2"
+                gap="1"
+                color="black"
+              >
+                <Text>Welcome</Text>
+                <Text>💥</Text>
+              </Flex> */}
+              <Flex
+                border="solid 2px"
+                w="4rem"
+                h="4rem"
+                bg="transparent"
+                position="absolute"
+                top="50%"
+                transform="translate(-50%, -50%)"
+                left="50%"
+                borderColor="secondary.100"
+                borderRadius="full"
+              ></Flex>
               <Center
                 bg={`url(${element})`}
                 _hover={{
@@ -112,19 +144,17 @@ const NavBar = () => {
                 }}
                 w="3rem"
                 h="3rem"
-                p="2.5"
                 as="figure"
                 borderRadius="full"
                 overflow="hidden"
                 transition=".2s"
               >
-                <Image src={logo} />
+                <Image filter="grayscale(1)" src={logo} />
               </Center>
             </Center>
           </Hide>
 
           <Flex
-            // gap="10"
             align="center"
             justify="space-between"
             w={{ base: "100%", md: "initial" }}
@@ -172,15 +202,18 @@ const NavBar = () => {
               {list.map((item, index) => renderLink(item, index))}
 
               <Flex mt="10">
-                <Socials size="xl" color="white" col="repeat(5, 1fr)" gap="5" />
+                <Socials
+                  size="2xl"
+                  color="white"
+                  col="repeat(5, 1fr)"
+                  gap="5"
+                />
               </Flex>
             </Flex>
 
             <Show below={"md"}>
               <Center
                 cursor="pointer"
-                h="3rem"
-                w="3rem"
                 fontSize="2xl"
                 onClick={() => setShow(!show)}
                 transition=".2s"
@@ -189,23 +222,37 @@ const NavBar = () => {
               </Center>
             </Show>
 
-            <Show below="md">
-              <Center
-                bg={`url(${element})`}
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-                w="3rem"
-                h="3rem"
-                p="2.5"
-                as="figure"
-                borderRadius="full"
-                overflow="hidden"
-                transition=".2s"
-              >
-                <Image src={logo} />
+            {/* <Show below="md">
+              <Center gap="2" position="relative">
+                <Flex
+                  border="solid 2px"
+                  w="4rem"
+                  h="4rem"
+                  bg="transparent"
+                  position="absolute"
+                  top="50%"
+                  transform="translate(-50%, -50%)"
+                  left="50%"
+                  borderColor="secondary.100"
+                  borderRadius="full"
+                ></Flex>
+                <Center
+                  bg={`url(${element})`}
+                  _hover={{
+                    transform: "scale(1.1)",
+                  }}
+                  w="3rem"
+                  h="3rem"
+                  // p="2.5"
+                  as="figure"
+                  borderRadius="full"
+                  overflow="hidden"
+                  transition=".2s"
+                >
+                  <Image filter="grayscale(1)" src={logo} />
+                </Center>
               </Center>
-            </Show>
+            </Show> */}
 
             <ColorModeToggler />
           </Flex>

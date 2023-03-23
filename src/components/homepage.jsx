@@ -1,16 +1,20 @@
 import { Grid } from "@chakra-ui/react";
-import AboutComponent from "./common/aboutComponent";
+import About from "./common/about";
+import ArticlesComponent from "./common/articlesComponent";
+import Experience from "./common/experience";
 import Hero from "./common/hero";
 import NavBar from "./common/navBar";
 
 const Homepage = () => {
   return (
     <>
-      <Grid minH="100vh">
+      <Grid minH="100vh" templateRows="max-content 1fr">
         <NavBar />
         <Hero />
       </Grid>
-      <AboutComponent />
+      <About />
+      <Experience />
+      <ArticlesComponent />
     </>
   );
 };
