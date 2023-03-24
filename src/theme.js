@@ -24,7 +24,11 @@ const styles = {
   global: {
     body: {
       scrollBehavior: "smooth",
-      fontSize: "90%",
+      fontSize: "95%",
+    },
+    "::selection": {
+      color: "black",
+      background: "secondary.100",
     },
     "body::-webkit-scrollbar": {
       width: ".3rem",

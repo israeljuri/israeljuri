@@ -6,6 +6,10 @@ export const getInformation = () => {
   return information;
 };
 
+export const getWorks = () => {
+  return works;
+};
+
 export const getRecentTechnologies = () => {
   return recentTechnologies;
 };
@@ -17,7 +21,6 @@ const navigationList = [
   { id: 1, label: "Home", path: "/" },
   { id: 2, label: "Works", path: "/works" },
   { id: 3, label: "Articles", path: "/articles" },
-  { id: 4, label: "Get in touch", path: "/get-in-touch" },
 ];
 
 const information = {
@@ -36,7 +39,6 @@ const recentTechnologies = [
   "Next.js",
   "Expo.dev",
   "Remix.run",
-  "Gatsby.js",
   "Git",
 ];
 
@@ -74,5 +76,62 @@ const experiences = [
       "Connected React.js to Firebase for backend services",
       "Turned MocksUps to User interfaces using React",
     ],
+  },
+];
+
+// ExpTrack
+import expTrackIcon from "../../assets/works/expTrack/icon.svg";
+import expTrackImage from "../../assets/works/expTrack/icon.svg";
+
+const works = [
+  {
+    id: 1,
+    icon: expTrackIcon,
+    img: expTrackImage,
+    title: "ExpTrack",
+    subTitle: "Expense Tracker",
+    brief:
+      "ExpTrack helps keep track of your expenses calculate your income and pay them on time",
+    type: "Web App",
+    designer: "Israel Juri",
+    collaborators: null,
+    tools: ["React.js", "Chakra-UI", "Zustan", "Formik", "Yup", "Firbase"],
+    contrains: [
+      "Project need a minimal State managment tool beyond React Context, i had to learn Zustand",
+      "Built this while my schedule was tight, had to work late nights",
+    ],
+    links: {
+      github: "https://github.com/israeljuri/exptrack.git",
+      live: "https://exptrack.netlify.app",
+      design: "https://figma.com/israeljuri/exptrack",
+      expoLink: null,
+      playStore: null,
+      appleStore: null,
+    },
+  },
+  {
+    id: 1,
+    icon: expTrackIcon,
+    img: expTrackImage,
+    title: "CriptoExch",
+    subTitle: "",
+    brief:
+      "Exchange crypto on the fly with CriptoExch, a minimal easy to understand modern crypto application",
+    type: "Mobile App",
+    designer: "Gabriel Maguire",
+    collaborators: [
+      { id: 1, name: "Israel Juri", path: "" },
+      { id: 2, name: "Gabriel Maguire", path: "" },
+    ],
+    tools: ["React Native", "Zustan", "Formik", "Yup"],
+    contrains: null,
+    links: {
+      github: "https://github.com/israeljuri/exptrack.git",
+      live: null,
+      design: "https://figma.com/israeljuri/exptrack",
+      expoLink: "https://criptoExch.netlify.app",
+      playStore: "https://play.google.come/criptoExch",
+      appleStore: "https://store.apple.come/criptoExch",
+    },
   },
 ];

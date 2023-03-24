@@ -1,4 +1,4 @@
-import { Grid, Icon, Link } from "@chakra-ui/react";
+import { Grid, Icon, Link, Text, Flex, useColorMode } from "@chakra-ui/react";
 import {
   FaLinkedin,
   FaTwitter,
@@ -6,10 +6,12 @@ import {
   FaGithub,
   FaPhoneSquareAlt,
 } from "react-icons/fa";
+import Fade from "react-reveal/Fade";
 import { getInformation } from "../services/data";
 
-const Socials = ({ size, col, row, gap, color }) => {
+const Socials = ({ size, col, row, gap, color, showLabel }) => {
   const information = getInformation();
+  const { colorMode } = useColorMode();
 
   const list = [
     {
@@ -57,10 +59,22 @@ const Socials = ({ size, col, row, gap, color }) => {
       templateColumns={col}
       templateRows={row}
     >
-      {list.map((item) => (
-        <Link key={item.id} target="_blank" href={item.custom + item.path}>
-          <Icon as={item.icon} />
-        </Link>
+      {list.map((item, index) => (
+        <Fade duration={300} delay={index + 1 * 500}>
+          <Link key={item.id} target="_blank" href={item.custom + item.path}>
+            <Flex align="center" justify="start" gap="2" fontFamily="Fira Mono">
+              <Icon as={item.icon} />
+              {showLabel && (
+                <Text
+                  fontSize="md"
+                  color={colorMode === "light" ? "gray.800" : "white"}
+                >
+                  {item.path}
+                </Text>
+              )}
+            </Flex>
+          </Link>
+        </Fade>
       ))}
     </Grid>
   );

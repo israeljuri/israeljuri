@@ -8,6 +8,7 @@ const NotFound = () => {
     <Grid id="hero">
       <CustomContainer>
         <Flex
+          h={{ base: "100vh", md: "80vh" }}
           textAlign="center"
           align="center"
           justify="center"

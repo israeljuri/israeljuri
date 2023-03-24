@@ -1,19 +1,12 @@
-import {
-  Grid,
-  Flex,
-  Heading,
-  Avatar,
-  Text,
-  Icon,
-  Box,
-  Hide,
-  Show,
-} from "@chakra-ui/react";
+import { Grid, Flex, Heading, Avatar, Text, Icon, Box } from "@chakra-ui/react";
 import { getExperiences } from "../services/data";
 import CustomContainer from "./customContainer";
 import ColorText from "./colorText";
 import { FaCaretRight } from "react-icons/fa";
 import { useState } from "react";
+
+import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 
 const Experience = () => {
   const experienceList = getExperiences();
@@ -49,6 +42,8 @@ const Experience = () => {
                     transform="translate(-50%, -50%)"
                     w="4rem"
                     h="4rem"
+                    zIndex="1"
+                    bg={currentlyShow === index && "#00bb7763"}
                     borderRadius="full"
                     border="solid 4px transparent"
                     borderColor={currentlyShow === index && "secondary.100"}
@@ -76,29 +71,37 @@ const Experience = () => {
                     }}
                   >
                     <Flex direction="column" order={{ 3: 1 }} gap="2">
-                      <Heading maxW="25ch">
-                        <Text as="span" fontFamily="Fira Mono">
-                          <ColorText>{item.role}</ColorText>{" "}
+                      <Fade duration={300}>
+                        <Heading maxW="25ch">
+                          <Text as="span" fontFamily="Fira Mono">
+                            <ColorText>{item.role}</ColorText>{" "}
+                          </Text>
+                          @{item.company}
+                        </Heading>
+                      </Fade>
+
+                      <Fade duration={300} delay={200}>
+                        <Text mt="4" maxW="50ch">
+                          {item.brief}
                         </Text>
-                        @{item.company}
-                      </Heading>
+                      </Fade>
 
-                      <Text mt="4" maxW="50ch">
-                        {item.brief}
-                      </Text>
-
-                      <Text mt="3" fontFamily="Fira Mono">
-                        <ColorText>
-                          {item.startDate} &ndash; {item.endDate}
-                        </ColorText>
-                      </Text>
+                      <Fade duration={300} delay={300}>
+                        <Text mt="3" fontFamily="Fira Mono">
+                          <ColorText>
+                            {item.startDate} &ndash; {item.endDate}
+                          </ColorText>
+                        </Text>
+                      </Fade>
 
                       <Flex mt="5" direction="column" gap="3">
-                        {item.duties.map((duty) => (
-                          <Flex align="center">
-                            <Icon color="secondary.100" as={FaCaretRight} />
-                            <Text>{duty}</Text>
-                          </Flex>
+                        {item.duties.map((duty, index) => (
+                          <Fade duration={300} delay={300 + (index + 1 * 100)}>
+                            <Flex align="center">
+                              <Icon color="secondary.100" as={FaCaretRight} />
+                              <Text>{duty}</Text>
+                            </Flex>
+                          </Fade>
                         ))}
                       </Flex>
                     </Flex>

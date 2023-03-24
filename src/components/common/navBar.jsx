@@ -9,9 +9,8 @@ import {
   Box,
   Text,
   useColorMode,
-  Link,
 } from "@chakra-ui/react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { getNavigationList } from "../services/data";
@@ -21,6 +20,9 @@ import element from "../../assets/element.svg";
 import ColorModeToggler from "./colorModeToggler";
 import CustomContainer from "./customContainer";
 import Socials from "./socials";
+import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
+import CustomLink from "./customLink";
 
 const NavBar = () => {
   const { colorMode } = useColorMode();
@@ -46,36 +48,35 @@ const NavBar = () => {
 
   const renderLink = (item, index) => {
     return (
-      <Flex
-        py="2"
-        gap="1"
-        as="li"
-        key={item.id}
-        color={getColor(item.path)}
-        fontSize={show ? "2xl" : "sm"}
-        fontWeight="bold"
-        fontFamily="Fira Mono"
-        transition=".2s"
-        position="relative"
-        _hover={{ div: { opacity: "1" } }}
-      >
-        <Box
+      <Fade delay={900 + (index + 1) * 100} duration={300}>
+        <Flex
+          py="2"
+          gap="1"
+          as="li"
+          key={item.id}
+          color={getColor(item.path)}
+          fontSize={show ? "2xl" : "sm"}
+          fontWeight="bold"
+          fontFamily="Fira Mono"
           transition=".2s"
-          position="absolute"
-          opacity={show && currentPath === item.path ? "1" : "0"}
-          top="100%"
-          left="0%"
-          h="3px"
-          borderRadius="full"
-          bg={colorMode === "light" ? (show ? "white" : "gray.800") : "white"}
-          w="100%"
-        ></Box>
+          position="relative"
+          _hover={{ div: { opacity: "1" } }}
+        >
+          <Box
+            transition=".2s"
+            position="absolute"
+            opacity={show && currentPath === item.path ? "1" : "0"}
+            top="100%"
+            left="0%"
+            h="3px"
+            borderRadius="full"
+            bg={colorMode === "light" ? (show ? "white" : "gray.800") : "white"}
+            w="100%"
+          ></Box>
 
-        {/* <Text fontFamily="Fira Mono" color={show ? "white" : "secondary.100"}>
-          {index}.
-        </Text> */}
-        <Link href={item.path}>{item.label}</Link>
-      </Flex>
+          <Link to={item.path}>{item.label}</Link>
+        </Flex>
+      </Fade>
     );
   };
 
@@ -105,53 +106,36 @@ const NavBar = () => {
           gap="10"
         >
           <Hide below="md">
-            <Center gap="2" position="relative">
-              {/* <Flex
-                position="absolute"
-                top="50%"
-                left="125%"
-                // w="3.5rem"
-                textAlign="center"
-                borderRadius="full"
-                transform="translateY(-50%)"
-                bg="white"
-                px="3"
-                py="1"
-                fontSize="sm"
-                zIndex="2"
-                gap="1"
-                color="black"
-              >
-                <Text>Welcome</Text>
-                <Text>💥</Text>
-              </Flex> */}
-              <Flex
-                border="solid 2px"
-                w="4rem"
-                h="4rem"
-                bg="transparent"
-                position="absolute"
-                top="50%"
-                transform="translate(-50%, -50%)"
-                left="50%"
-                borderColor="secondary.100"
-                borderRadius="full"
-              ></Flex>
-              <Center
-                bg={`url(${element})`}
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-                w="3rem"
-                h="3rem"
-                as="figure"
-                borderRadius="full"
-                overflow="hidden"
-                transition=".2s"
-              >
-                <Image filter="grayscale(1)" src={logo} />
+            <Zoom duration={200} delay={800}>
+              <Center gap="2" position="relative">
+                <Flex
+                  border="solid 2px"
+                  w="4rem"
+                  h="4rem"
+                  bg="transparent"
+                  position="absolute"
+                  top="50%"
+                  transform="translate(-50%, -50%)"
+                  left="50%"
+                  borderColor="secondary.100"
+                  borderRadius="full"
+                ></Flex>
+                <Center
+                  bg={`url(${element})`}
+                  _hover={{
+                    transform: "scale(1.1)",
+                  }}
+                  w="3rem"
+                  h="3rem"
+                  as="figure"
+                  borderRadius="full"
+                  overflow="hidden"
+                  transition=".2s"
+                >
+                  <Image filter="grayscale(1)" src={logo} />
+                </Center>
               </Center>
-            </Center>
+            </Zoom>
           </Hide>
 
           <Flex
@@ -161,9 +145,11 @@ const NavBar = () => {
             as="article"
           >
             <Hide below="md">
-              <Flex gap="10" as="ul">
-                {list.map((item, index) => renderLink(item, index))}
-              </Flex>
+              <Zoom duration={200} delay={800}>
+                <Flex gap="10" as="ul">
+                  {list.map((item, index) => renderLink(item, index))}
+                </Flex>
+              </Zoom>
             </Hide>
 
             <Flex
@@ -211,50 +197,24 @@ const NavBar = () => {
               </Flex>
             </Flex>
 
-            <Show below={"md"}>
-              <Center
-                cursor="pointer"
-                fontSize="2xl"
-                onClick={() => setShow(!show)}
-                transition=".2s"
-              >
-                <Icon as={FiArrowRight} />
-              </Center>
-            </Show>
-
-            {/* <Show below="md">
-              <Center gap="2" position="relative">
-                <Flex
-                  border="solid 2px"
-                  w="4rem"
-                  h="4rem"
-                  bg="transparent"
-                  position="absolute"
-                  top="50%"
-                  transform="translate(-50%, -50%)"
-                  left="50%"
-                  borderColor="secondary.100"
-                  borderRadius="full"
-                ></Flex>
+            <Zoom duration={200} delay={800}>
+              <Show below={"md"}>
                 <Center
-                  bg={`url(${element})`}
-                  _hover={{
-                    transform: "scale(1.1)",
-                  }}
-                  w="3rem"
-                  h="3rem"
-                  // p="2.5"
-                  as="figure"
-                  borderRadius="full"
-                  overflow="hidden"
+                  cursor="pointer"
+                  fontSize="2xl"
+                  onClick={() => setShow(!show)}
                   transition=".2s"
                 >
-                  <Image filter="grayscale(1)" src={logo} />
+                  <Icon as={FiArrowRight} />
                 </Center>
-              </Center>
-            </Show> */}
+              </Show>
+            </Zoom>
 
-            <ColorModeToggler />
+            {/* <CustomLink label="Go to next route" path="/works" /> */}
+
+            <Zoom duration={200} delay={800}>
+              <ColorModeToggler />
+            </Zoom>
           </Flex>
         </Flex>
       </CustomContainer>
