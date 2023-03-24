@@ -24,6 +24,7 @@ const styles = {
   global: {
     body: {
       scrollBehavior: "smooth",
+      fontSize: "90%",
     },
     "body::-webkit-scrollbar": {
       width: ".3rem",

@@ -46,16 +46,17 @@ const Hero = () => {
               </Flex>
 
               <Text lineHeight="2" maxW="50ch">
-                Currently i am focused on building High quality{" "}
-                <ColorText>Web & Mobile</ColorText> applications using{" "}
+                Currently, I am focused on building high-quality{" "}
+                <ColorText>web & mobile</ColorText> applications using {" "}
                 <ColorText>React</ColorText> and{" "}
                 <ColorText>React Native</ColorText>.
               </Text>
 
               <Text lineHeight="2" maxW="50ch">
-                But i am a Software Developer experienced in Java, JavaScript &
-                TypeScript. I also <LinkText label="write" path="/articles" />{" "}
-                about the intrinsic parts of Programming
+                However, I am a Software Developer with experience in Java,
+                JavaScript & TypeScript. I also{" "}
+                <LinkText label="write" path="/articles" /> about the underlying
+                principles of Programming
               </Text>
             </Flex>
 

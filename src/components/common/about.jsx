@@ -32,25 +32,22 @@ const About = () => {
           <Flex order={{ base: 2, md: 1 }} gap="10" direction="column">
             <Heading size="xl">About Me</Heading>
             <Text maxW="50ch" lineHeight="1.5">
-              I Strongly believe Software Development is an art of Problem
-              Solving so I'm keen on how to deliver value.
+              I strongly believe software development is an art of problem
+              solving, so I'm keen on how to deliver value.
             </Text>
             <Text maxW="50ch" lineHeight="1.5">
-              This made me invest in building a{" "}
-              <ColorText>solid foundation</ColorText> in Computer Science
-              Concepts{" "}
+              This motivated me to invest in{" "}
+              <ColorText>solidifying my knowledge</ColorText> of computer
+              science concepts{" "}
               <ColorText>
-                (Data Structures, Algorithms, Design Patterns, OOP etc.)
+                (Data Structures, Algorithms, Design Patterns, OOP, and so on)
               </ColorText>{" "}
             </Text>
             <Text maxW="50ch" lineHeight="1.5">
-              I am currently voluteering{" "}
-              <LinkText
-                label="@techovillehq"
-                path="https://technovillehq.com"
-              />{" "}
-              but I'm{" "}
-              <ColorText>open to opportunities and collaborations</ColorText>.
+              I am currently volunteering at{" "}
+              <LinkText label="techovillehq" path="https://technovillehq.com" />{" "}
+              , but I'm {" "}
+              <ColorText>open to opportunities and collaborations </ColorText>.
               Aiming to work with a passionate team looking to add value to
               people by creating products.
             </Text>
