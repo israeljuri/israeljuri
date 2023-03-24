@@ -73,17 +73,9 @@ const Hero = () => {
                   md: "repeat(2, max-content)",
                 }}
               >
-                <CustomLink
-                  label="Recent Works"
-                  path="/works"
-                  icon={FaHammer}
-                />
+                <CustomLink label="Works" path="/works" icon={FaHammer} />
 
-                <CustomLink
-                  label="Latest Articles"
-                  path="/blog"
-                  icon={FaReadme}
-                />
+                <CustomLink label="Articles" path="/blog" icon={FaReadme} />
               </Grid>
             </Fade>
           </Flex>

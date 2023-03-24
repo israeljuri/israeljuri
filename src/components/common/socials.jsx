@@ -66,7 +66,7 @@ const Socials = ({ size, col, row, gap, color, showLabel }) => {
               <Icon as={item.icon} />
               {showLabel && (
                 <Text
-                  fontSize="md"
+                  fontSize={{ base: "sm", md: "md" }}
                   color={colorMode === "light" ? "gray.800" : "white"}
                 >
                   {item.path}
