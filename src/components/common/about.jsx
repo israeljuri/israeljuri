@@ -6,6 +6,8 @@ import {
   Heading,
   Icon,
   Text,
+  Button,
+  Box,
 } from "@chakra-ui/react";
 import CustomContainer from "./customContainer";
 import ColorText from "./colorText";
@@ -18,8 +20,9 @@ import LinkText from "./linkText";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 
-import { FaCaretRight } from "react-icons/fa";
+import { FaCaretRight, FaDownload, FaReadme } from "react-icons/fa";
 import { getRecentTechnologies } from "../services/data";
+import CustomLink from "./customLink";
 
 const About = () => {
   const recentTechnologies = getRecentTechnologies();
@@ -61,7 +64,7 @@ const About = () => {
                     label="techovillehq"
                     path="https://technovillehq.com"
                   />{" "}
-                  , but I'm {" "}
+                  , but I'm {""}
                   <ColorText>
                     open to opportunities and collaborations{" "}
                   </ColorText>
@@ -123,6 +126,10 @@ const About = () => {
               <Text fontFamily="Fira Mono">Lagos, Nigeria.</Text>
             </Flex>
             <Socials col="repeat(5, 1fr)" size="1.3rem" gap="3" />
+
+            <Box mt="5">
+              <CustomLink fontSize="xs" label="Get my Resume" path="/" />
+            </Box>
           </Flex>
         </Grid>
       </CustomContainer>

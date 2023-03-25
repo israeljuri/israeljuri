@@ -8,6 +8,7 @@ const colors = {
   secondary: {
     100: "#00BB77",
   },
+  dimWhite: "#e7e7e7",
 };
 
 const config = {

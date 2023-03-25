@@ -1,22 +1,23 @@
-import { Center, Icon } from "@chakra-ui/react";
+import { Center, Icon, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-const CustomLink = ({ icon, label, path }) => {
+const CustomLink = (props) => {
+  const { icon, label, path } = props;
   return (
-    <Center
-      gap={2}
-      transition=".2s"
-      _hover={{ borderColor: "secondary.100" }}
-      borderBottom="dotted 1px"
-      fontSize="lg"
-      fontFamily="Fira Mono"
-    >
-      <Link to={path} fontWeight="bold">
-        {label}
-      </Link>
-
-      {icon && <Icon as={icon} />}
-    </Center>
+    <Link to={path} fontWeight="bold">
+      <Center
+        gap={2}
+        transition=".2s"
+        _hover={{ borderColor: "secondary.100" }}
+        borderBottom="dotted 1px"
+        fontSize="lg"
+        fontFamily="Fira Mono"
+        {...props}
+      >
+        <Text> {label}</Text>
+        {icon && <Icon as={icon} />}
+      </Center>
+    </Link>
   );
 };
 

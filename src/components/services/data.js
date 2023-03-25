@@ -10,17 +10,25 @@ export const getWorks = () => {
   return works;
 };
 
+export const getRecentWorks = () => {
+  return works.slice(0, 2);
+};
+
 export const getRecentTechnologies = () => {
   return recentTechnologies;
 };
+
 export const getExperiences = () => {
   return experiences;
 };
 
+import { BiHome } from "react-icons/bi";
+import { FaHammer } from "react-icons/fa";
+
 const navigationList = [
-  { id: 1, label: "Home", path: "/" },
-  { id: 2, label: "Works", path: "/works" },
-  { id: 3, label: "Articles", path: "/articles" },
+  { id: 1, label: "Home", path: "/", icon: BiHome },
+  { id: 2, label: "Works", path: "/works", icon: FaHammer },
+  // { id: 3, label: "Articles", path: "/articles" },
 ];
 
 const information = {

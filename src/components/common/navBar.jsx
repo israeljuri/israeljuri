@@ -38,7 +38,7 @@ const NavBar = () => {
         ? "white"
         : "secondary.100"
       : show
-      ? "white"
+      ? "gray.200"
       : "inherit";
 
   const stickyNavbar = () => {
@@ -55,26 +55,19 @@ const NavBar = () => {
           as="li"
           key={item.id}
           color={getColor(item.path)}
-          fontSize={show ? "2xl" : "sm"}
+          fontSize={show ? "2xl" : "md"}
           fontWeight="bold"
           fontFamily="Fira Mono"
           transition=".2s"
           position="relative"
-          _hover={{ div: { opacity: "1" } }}
+          _hover={{ color: show ? "white" : "secondary.100" }}
         >
-          <Box
-            transition=".2s"
-            position="absolute"
-            opacity={show && currentPath === item.path ? "1" : "0"}
-            top="100%"
-            left="0%"
-            h="3px"
-            borderRadius="full"
-            bg={colorMode === "light" ? (show ? "white" : "gray.800") : "white"}
-            w="100%"
-          ></Box>
-
-          <Link to={item.path}>{item.label}</Link>
+          <Link to={item.path}>
+            <Center gap="2">
+              <Text>{item.label}</Text>
+              {<item.icon />}
+            </Center>
+          </Link>
         </Flex>
       </Fade>
     );
@@ -181,8 +174,12 @@ const NavBar = () => {
                 transition=".2s"
                 zIndex="100"
                 color="white"
+                gap="2"
               >
                 <Icon as={FiArrowLeft} />
+                <Text fontWeight="bold" fontSize="md">
+                  Go back
+                </Text>
               </Center>
 
               {list.map((item, index) => renderLink(item, index))}
@@ -192,7 +189,7 @@ const NavBar = () => {
                   size="2xl"
                   color="white"
                   col="repeat(5, 1fr)"
-                  gap="5"
+                  gap="6"
                 />
               </Flex>
             </Flex>
@@ -204,7 +201,11 @@ const NavBar = () => {
                   fontSize="2xl"
                   onClick={() => setShow(!show)}
                   transition=".2s"
+                  gap="2"
                 >
+                  <Text fontWeight="bold" fontSize="sm">
+                    Menu
+                  </Text>
                   <Icon as={FiArrowRight} />
                 </Center>
               </Show>

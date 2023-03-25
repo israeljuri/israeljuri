@@ -1,6 +1,6 @@
 import { Flex, Heading, Text, Grid } from "@chakra-ui/react";
 import CustomContainer from "../common/customContainer";
-import { FaHammer, FaReadme } from "react-icons/fa";
+import { FaHammer, FaExternalLinkSquareAlt } from "react-icons/fa";
 import Fade from "react-reveal/Fade";
 
 import CustomLink from "./customLink";
@@ -75,7 +75,11 @@ const Hero = () => {
               >
                 <CustomLink label="Works" path="/works" icon={FaHammer} />
 
-                <CustomLink label="Articles" path="/blog" icon={FaReadme} />
+                <CustomLink
+                  label="Articles"
+                  path="https://israeljuri.hashnode.dev"
+                  icon={FaExternalLinkSquareAlt}
+                />
               </Grid>
             </Fade>
           </Flex>

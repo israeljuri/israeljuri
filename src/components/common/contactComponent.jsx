@@ -5,13 +5,13 @@ import Socials from "./socials";
 
 const ContactComponent = () => {
   return (
-    <Grid>
+    <Grid py="20">
       <CustomContainer>
-        <Grid py="10" mb="20" gap={{ base: "10", md: "10" }}>
+        <Grid gap={{ base: "10", md: "10" }}>
           <Fade duration={300}>
             <Flex order={{ base: 2, md: 1 }} gap="5" direction="column">
               <Heading size="xl">Let's get in touch</Heading>
-              <Text>Please say hi, i would love to hear from you.</Text>
+              <Text>Let's get in touch, I would love to hear from you.</Text>
             </Flex>
 
             <Socials color="secondary.100" size="2rem" showLabel gap="5" />
