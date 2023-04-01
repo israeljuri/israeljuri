@@ -13,15 +13,19 @@ import { FiArrowRight } from "react-icons/fi";
 const Homepage = () => {
   return (
     <>
-      <Flex position="absolute" bottom="10" zIndex="10" right="10">
+      <Flex position="absolute" bottom="5" zIndex="10" right="10">
         <CustomLink
+          size="sm"
           label="Next route /works"
           path="/works"
           icon={FiArrowRight}
         />
       </Flex>
       <ScrollToTop />
-      <Grid minH="100vh" templateRows="max-content 1fr">
+      <Grid
+        minH={{ base: "100vh", md: "40rem" }}
+        templateRows="max-content 1fr"
+      >
         <NavBar />
         <Hero />
       </Grid>

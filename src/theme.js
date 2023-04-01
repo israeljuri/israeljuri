@@ -25,7 +25,7 @@ const styles = {
   global: {
     body: {
       scrollBehavior: "smooth",
-      fontSize: "95%",
+      fontSize: "90%",
     },
     "::selection": {
       color: "black",

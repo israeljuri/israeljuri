@@ -15,7 +15,7 @@ import { useEffect, useState } from "react";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { getNavigationList } from "../services/data";
 
-import logo from "../../assets/avatar-2.png";
+import avatar from "../../assets/avatar.png";
 import element from "../../assets/element.svg";
 import ColorModeToggler from "./colorModeToggler";
 import CustomContainer from "./customContainer";
@@ -114,9 +114,9 @@ const NavBar = () => {
                   borderRadius="full"
                 ></Flex>
                 <Center
-                  bg={`url(${element})`}
+                  zIndex="1"
                   _hover={{
-                    transform: "scale(1.1)",
+                    transform: "scale(1.2)",
                   }}
                   w="3rem"
                   h="3rem"
@@ -125,7 +125,7 @@ const NavBar = () => {
                   overflow="hidden"
                   transition=".2s"
                 >
-                  <Image filter="grayscale(1)" src={logo} />
+                  <Image src={avatar} />
                 </Center>
               </Center>
             </Zoom>

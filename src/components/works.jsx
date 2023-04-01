@@ -18,8 +18,13 @@ const Works = () => {
 
   return (
     <>
-      <Flex position="absolute" bottom="10" zIndex="10" right="10">
-        <CustomLink label="Go back home /" path="/" icon={FiArrowRight} />
+      <Flex position="absolute" bottom="5" zIndex="10" right="10">
+        <CustomLink
+          size="sm"
+          label="Go back home /"
+          path="/"
+          icon={FiArrowRight}
+        />
       </Flex>
       <ScrollToTop />
       <NavBar />

@@ -27,13 +27,7 @@ const ArticlesComponent = () => {
           </Fade>
 
           <Fade duration={300} delay={400}>
-            <Text
-              color={colorMode === "light" ? "dimWhite" : "initial"}
-              maxW="70ch"
-              mb="7"
-              lineHeight="2"
-              fontSize="md"
-            >
+            <Text maxW="70ch" mb="7" lineHeight="2" fontSize="md">
               In as much as their are shinny tools out their, concepts important
               to writing and maintain a solution is often what codebases need! I
               write about fundamental but crucial topics to get the hange of as

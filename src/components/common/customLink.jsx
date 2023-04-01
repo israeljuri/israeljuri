@@ -2,7 +2,7 @@ import { Center, Icon, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 const CustomLink = (props) => {
-  const { icon, label, path } = props;
+  const { icon, label, path, size } = props;
   return (
     <Link to={path} fontWeight="bold">
       <Center
@@ -10,7 +10,7 @@ const CustomLink = (props) => {
         transition=".2s"
         _hover={{ borderColor: "secondary.100" }}
         borderBottom="dotted 1px"
-        fontSize="lg"
+        fontSize={size || "lg"}
         fontFamily="Fira Mono"
         {...props}
       >

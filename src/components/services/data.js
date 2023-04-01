@@ -88,14 +88,12 @@ const experiences = [
 ];
 
 // ExpTrack
-import expTrackIcon from "../../assets/works/expTrack/icon.svg";
-import expTrackImage from "../../assets/works/expTrack/icon.svg";
 
 const works = [
   {
     id: 1,
-    icon: expTrackIcon,
-    img: expTrackImage,
+    icon: null,
+    img: null,
     title: "ExpTrack",
     subTitle: "Expense Tracker",
     brief:
@@ -119,8 +117,8 @@ const works = [
   },
   {
     id: 1,
-    icon: expTrackIcon,
-    img: expTrackImage,
+    icon: null,
+    img: null,
     title: "CriptoExch",
     subTitle: "",
     brief:

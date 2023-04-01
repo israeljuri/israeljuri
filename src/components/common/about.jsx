@@ -11,8 +11,8 @@ import {
 } from "@chakra-ui/react";
 import CustomContainer from "./customContainer";
 import ColorText from "./colorText";
-import avatar from "../../assets/avatar-2.png";
-import element from "../../assets/element.svg";
+import avatar from "../../assets/avatar.png";
+// import element from "../../assets/element.svg";
 import Socials from "./socials";
 import { BiTargetLock } from "react-icons/bi";
 import LinkText from "./linkText";
@@ -63,7 +63,7 @@ const About = () => {
                   <LinkText
                     label="techovillehq"
                     path="https://technovillehq.com"
-                  />{" "}
+                  />
                   , but I'm {""}
                   <ColorText>
                     open to opportunities and collaborations{" "}
@@ -82,6 +82,7 @@ const About = () => {
                 templateColumns="max-content max-content"
                 columnGap="5"
                 rowGap="2"
+                mt="-1"
                 fontFamily="Fira Mono"
               >
                 {recentTechnologies.map((tech, index) => (
@@ -105,19 +106,13 @@ const About = () => {
           >
             <Zoom duration={100} delay={400}>
               <Center
-                bg={`url(${element})`}
-                h={{ base: "12rem", md: "16rem" }}
-                w={{ base: "12rem", md: "16rem" }}
-                borderRadius="md"
+                h={{ base: "12rem", md: "15rem" }}
+                w={{ base: "12rem", md: "15rem" }}
                 overflow="hidden"
                 flexDirection="column"
-                _hover={{
-                  div: {
-                    transform: "scale(1.05)",
-                  },
-                }}
+                p="2"
               >
-                <Image filter="grayscale(1)" src={avatar} />
+                <Image borderRadius="md" src={avatar} />
               </Center>
             </Zoom>
 

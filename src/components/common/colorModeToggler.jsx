@@ -18,10 +18,10 @@ const ColorModeToggler = () => {
           cursor="pointer"
           onClick={toggleColorMode}
         >
-          <Icon as={FaMoon} />
           <Text textTransform="capitalize" fontWeight="bold" fontSize="sm">
             {colorMode}
           </Text>
+          <Icon as={FaMoon} />
         </Center>
       ) : (
         <Center
@@ -31,10 +31,10 @@ const ColorModeToggler = () => {
           cursor="pointer"
           onClick={toggleColorMode}
         >
-          <Icon as={FaSun} />
           <Text textTransform="capitalize" fontWeight="bold" fontSize="sm">
             {colorMode}
           </Text>
+          <Icon as={FaSun} />
         </Center>
       )}
     </Center>

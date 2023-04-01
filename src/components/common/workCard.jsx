@@ -20,6 +20,8 @@ import {
   FaSketch,
 } from "react-icons/fa";
 import LinkText from "./linkText";
+import element from "../../assets/element.svg";
+import iconPlaceHolder from "../../assets/icon-placeholder.png";
 
 const WorkCard = ({ work, index, noImage }) => {
   const { colorMode } = useColorMode();
@@ -52,7 +54,12 @@ const WorkCard = ({ work, index, noImage }) => {
             bg="#00bb77a6"
             transition=".1s"
           ></Flex>
-          <Image h="100%" w="100%" objectFit="cover" src={work.img} />
+          <Image
+            h="100%"
+            w="100%"
+            objectFit="cover"
+            src={work.img || element}
+          />
         </Grid>
       )}
 
@@ -73,7 +80,7 @@ const WorkCard = ({ work, index, noImage }) => {
             overflow="hidden"
             mb="5"
           >
-            <Image src={work.icon} />
+            <Image w="100%" h="100%" src={work.icon || iconPlaceHolder} />
           </Center>
         </Fade>
 

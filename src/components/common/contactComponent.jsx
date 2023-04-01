@@ -14,7 +14,7 @@ const ContactComponent = () => {
               <Text>Let's get in touch, I would love to hear from you.</Text>
             </Flex>
 
-            <Socials color="secondary.100" size="2rem" showLabel gap="5" />
+            <Socials color="secondary.100" size="1.8rem" showLabel gap="5" />
           </Fade>
         </Grid>
       </CustomContainer>
