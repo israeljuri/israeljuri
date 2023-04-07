@@ -17,9 +17,9 @@ const NotFound = () => {
           gap="5"
           pt={{ base: 0, md: "10rem" }}
         >
-          <Heading size="3xl">😒 Not found</Heading>
+          <Heading size="3xl">😒 Coming soon</Heading>
           <Text mb="5" fontSize="xl" maxW="70ch" lineHeight="1.5">
-            The page you're looking for cannot be found.
+            The page you're looking is under development.
           </Text>
           <CustomLink label="Go home" path="/" icon={BiHome} />
         </Flex>

@@ -43,7 +43,7 @@ const recentTechnologies = [
   "JavaScript",
   "TypeScript",
   "React",
-  "React Native",
+  "React Native (Expo)",
   "Next.js",
   // "Astro",
   "Git",
