@@ -14,26 +14,26 @@ const Hero = () => {
         <Grid
           mt={{ base: "-5", md: 0 }}
           h="100%"
-          placeItems="start"
+          placeItems="center"
           alignItems="center"
           py={{ base: 10, md: 0 }}
           gap={{ base: 10, md: 0 }}
         >
           <Flex
-            align="start"
-            justify="start"
+            align="center"
+            justify="center"
             as="article"
             direction="column"
             gap="10"
-            textAlign="left"
+            textAlign="center"
           >
-            <Flex as="article" direction="column" gap="10" align="start">
+            <Flex as="article" direction="column" gap="10" align="center">
               <Fade delay={200} duration={200}>
                 <Flex direction={{ base: "column", md: "row" }}>
                   <Heading
                     order={{ base: 2, md: 1 }}
                     fontWeight="600"
-                    size={{ base: "3xl", md: "3xl" }}
+                    size={{ base: "3xl", md: "4xl" }}
                     maxW={{ base: "20ch", md: "25ch" }}
                   >
                     I am Israel Juri

@@ -122,9 +122,9 @@ const About = () => {
             </Flex>
             <Socials col="repeat(5, 1fr)" size="1.3rem" gap="3" />
 
-            <Box mt="5">
+            {/* <Box mt="5">
               <CustomLink fontSize="xs" label="Get my Resume" path="/" />
-            </Box>
+            </Box> */}
           </Flex>
         </Grid>
       </CustomContainer>

@@ -45,9 +45,9 @@ const recentTechnologies = [
   "React",
   "React Native",
   "Next.js",
-  "Expo.dev",
-  "Remix.run",
+  // "Astro",
   "Git",
+  "Docker",
 ];
 
 import theraswiftImage from "../../assets/experience/theraswift.png";
