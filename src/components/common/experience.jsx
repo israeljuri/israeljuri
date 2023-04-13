@@ -49,6 +49,7 @@ const Experience = () => {
                     borderColor={currentlyShow === index && "secondary.100"}
                   ></Box>
                   <Avatar
+                    filter="grayscale(10)"
                     src={item.img}
                     w="3rem"
                     h="3rem"
@@ -65,6 +66,7 @@ const Experience = () => {
                   <Grid
                     gap="5"
                     key={item.id}
+                    fontSize="md"
                     templateColumns={{
                       base: "1fr",
                       md: "max-content max-content 1fr",
@@ -94,9 +96,13 @@ const Experience = () => {
                         </Text>
                       </Fade>
 
-                      <Flex mt="5" direction="column" gap="3">
+                      <Flex mt="5" direction="column" gap="6">
                         {item.duties.map((duty, index) => (
-                          <Fade duration={300} delay={300 + (index + 1 * 100)}>
+                          <Fade
+                            key={duty.id}
+                            duration={300}
+                            delay={300 + (index + 1 * 100)}
+                          >
                             <Flex align="center">
                               <Icon color="secondary.100" as={FaCaretRight} />
                               <Text>{duty}</Text>

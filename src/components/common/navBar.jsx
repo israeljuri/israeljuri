@@ -38,7 +38,7 @@ const NavBar = () => {
         ? "white"
         : "secondary.100"
       : show
-      ? "gray.200"
+      ? "secondary.200"
       : "inherit";
 
   const stickyNavbar = () => {

@@ -22,12 +22,12 @@ export const getExperiences = () => {
   return experiences;
 };
 
-import { BiHome } from "react-icons/bi";
-import { FaHammer } from "react-icons/fa";
+import { FiHome, FiBriefcase } from "react-icons/fi";
+// import { BiBriefcase } from "react-icons/fa";
 
 const navigationList = [
-  { id: 1, label: "Home", path: "/", icon: BiHome },
-  { id: 2, label: "Works", path: "/works", icon: FaHammer },
+  { id: 1, label: "Home", path: "/", icon: FiHome },
+  { id: 2, label: "Works", path: "/works", icon: FiBriefcase },
   // { id: 3, label: "Articles", path: "/articles" },
 ];
 
@@ -52,10 +52,27 @@ const recentTechnologies = [
 
 import theraswiftImage from "../../assets/experience/theraswift.png";
 import technovilleImg from "../../assets/experience/technoville.jpg";
+import utifiImg from "../../assets/experience/utifi.svg";
 
 const experiences = [
   {
     id: 1,
+    company: "DFET",
+    role: "Contract Frontend Developer",
+    img: utifiImg,
+    brief:
+      "Utifi Digitizing Finance for Everyone, by connecting traditional bank with blockchain.",
+    startDate: "April 2023",
+    endDate: "Present",
+    duties: [
+      "Turned mockups into User interfaces",
+      "Communicated with CTO closely to brain storm ideas",
+      "Single handedly carried out important web projects without supervision",
+      "Worked with technologies like React.js, Chakra-UI, Postman & Photoshop",
+    ],
+  },
+  {
+    id: 2,
     company: "Technoville",
     role: "Volunteer Software Developer",
     img: technovilleImg,
@@ -71,7 +88,7 @@ const experiences = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     company: "ThreaSwift RX",
     role: "Frontend Developer",
     img: theraswiftImage,

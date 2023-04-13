@@ -12,26 +12,29 @@ const ArticlesComponent = () => {
       <CustomContainer>
         <Grid
           bg={`url(${element})`}
+          // bg="secondary.200"
           py="20"
           px="10"
+          gap="8"
           color="white"
-          borderRadius="md"
+          borderRadius="xl"
           textAlign="center"
           placeItems="center"
-          gap="8"
         >
           <Fade duration={300} delay={200}>
             <Heading maxW="20ch" size={{ base: "2xl", md: "2xl" }}>
-              The Intrinsic parts of Programming
+              {/* The Intrinsic parts of Programming */}
+              Articles on Programming
             </Heading>
           </Fade>
 
           <Fade duration={300} delay={400}>
             <Text maxW="70ch" mb="7" lineHeight="2" fontSize="md">
-              In as much as their are shinny tools out their, concepts important
-              to writing and maintain a solution is often what codebases need! I
-              write about fundamental but crucial topics to get the hange of as
-              you journey into programming
+              In as much as their are shinny tools/frameworks out there,
+              underlying concepts that makes those tools shinny are often
+              neglected, which makes learning them a lot harder. I blog about
+              those fundamental but crucial concepts to help you pickup
+              tools/frameworks faster.
             </Text>
           </Fade>
 

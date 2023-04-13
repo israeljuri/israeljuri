@@ -1,6 +1,6 @@
 import { Flex, Heading, Text, Grid } from "@chakra-ui/react";
 import CustomContainer from "../common/customContainer";
-import { FaHammer, FaExternalLinkSquareAlt } from "react-icons/fa";
+import { FiBriefcase, FiExternalLink } from "react-icons/fi";
 import Fade from "react-reveal/Fade";
 
 import CustomLink from "./customLink";
@@ -49,14 +49,14 @@ const Hero = () => {
                 </Flex>
               </Fade>
               <Fade delay={400} duration={200}>
-                <Text lineHeight="2" maxW="50ch">
+                <Text fontSize="md" lineHeight="2" maxW="50ch">
                   Currently, I am focused on building high-quality{" "}
                   <ColorText>web & mobile</ColorText> applications using {" "}
                   <ColorText>React</ColorText> and{" "}
                   <ColorText>React Native</ColorText>.
                 </Text>
 
-                <Text lineHeight="2" maxW="50ch">
+                <Text fontSize="md" lineHeight="2" maxW="50ch">
                   However, I am a Software Developer with experience in Java,
                   JavaScript & TypeScript. I also{" "}
                   <LinkText label="write" path="/articles" /> about the
@@ -74,12 +74,12 @@ const Hero = () => {
                   md: "repeat(2, max-content)",
                 }}
               >
-                <CustomLink label="Works" path="/works" icon={FaHammer} />
+                <CustomLink label="Works" path="/works" icon={FiBriefcase} />
 
                 <CustomLink
                   label="Articles"
                   path="https://israeljuri.hashnode.dev"
-                  icon={FaExternalLinkSquareAlt}
+                  icon={FiExternalLink}
                 />
               </Grid>
             </Fade>

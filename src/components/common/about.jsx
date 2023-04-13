@@ -36,7 +36,12 @@ const About = () => {
           gap={{ base: "10", md: "20" }}
           templateColumns={{ base: "1fr", md: "max-content max-content" }}
         >
-          <Flex order={{ base: 2, md: 1 }} gap="10" direction="column">
+          <Flex
+            fontSize="md"
+            order={{ base: 2, md: 1 }}
+            gap="10"
+            direction="column"
+          >
             <Fade duration={300}>
               <Heading size="xl">About Me</Heading>
               <Fade duration={600} delay={100}>
@@ -57,6 +62,7 @@ const About = () => {
                   </ColorText>{" "}
                 </Text>
               </Fade>
+
               <Fade duration={600} delay={300}>
                 <Text maxW="50ch" lineHeight="1.5">
                   I am currently volunteering at{" "}
@@ -72,6 +78,7 @@ const About = () => {
                   to people by creating products.
                 </Text>
               </Fade>
+
               <Fade duration={600} delay={300}>
                 <Text maxW="50ch" lineHeight="1.5">
                   Here are some technologies I've been working with recently:
@@ -106,13 +113,13 @@ const About = () => {
           >
             <Zoom duration={100} delay={400}>
               <Center
-                h={{ base: "12rem", md: "15rem" }}
-                w={{ base: "12rem", md: "15rem" }}
+                h={{ base: "15rem", md: "15rem" }}
+                w={{ base: "15rem", md: "15rem" }}
                 overflow="hidden"
                 flexDirection="column"
                 p="2"
               >
-                <Image borderRadius="md" src={avatar} />
+                <Image borderRadius="xl" src={avatar} />
               </Center>
             </Zoom>
 
@@ -122,9 +129,9 @@ const About = () => {
             </Flex>
             <Socials col="repeat(5, 1fr)" size="1.3rem" gap="3" />
 
-            {/* <Box mt="5">
+            <Box mt="5">
               <CustomLink fontSize="xs" label="Get my Resume" path="/" />
-            </Box> */}
+            </Box>
           </Flex>
         </Grid>
       </CustomContainer>

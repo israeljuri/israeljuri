@@ -1,5 +1,6 @@
 import { Text, Hide, Center, useColorMode, Icon } from "@chakra-ui/react";
-import { FaMoon, FaLightbulb, FaSun } from "react-icons/fa";
+// import { FaMoon, FaLightbulb, FaSun } from "react-icons/fa";
+import { FiSun, FiMoon } from "react-icons/fi";
 
 const ColorModeToggler = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -14,27 +15,29 @@ const ColorModeToggler = () => {
         <Center
           // h="3rem"
           // w="3rem"
+          fontSize={{ base: "xl", md: "lg" }}
           gap="2"
           cursor="pointer"
           onClick={toggleColorMode}
         >
-          <Text textTransform="capitalize" fontWeight="bold" fontSize="sm">
+          {/* <Text textTransform="capitalize" fontWeight="bold" fontSize="sm">
             {colorMode}
-          </Text>
-          <Icon as={FaMoon} />
+          </Text> */}
+          <Icon as={FiMoon} />
         </Center>
       ) : (
         <Center
-          h="3rem"
-          w="3rem"
+          // h="3rem"
+          // w="3rem"
           gap="2"
           cursor="pointer"
           onClick={toggleColorMode}
+          fontSize={{ base: "xl", md: "lg" }}
         >
-          <Text textTransform="capitalize" fontWeight="bold" fontSize="sm">
+          {/* <Text textTransform="capitalize" fontWeight="bold" fontSize="sm">
             {colorMode}
-          </Text>
-          <Icon as={FaSun} />
+          </Text> */}
+          <Icon as={FiSun} />
         </Center>
       )}
     </Center>

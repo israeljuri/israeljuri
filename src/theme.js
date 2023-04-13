@@ -7,6 +7,7 @@ const colors = {
   },
   secondary: {
     100: "#00BB77",
+    200: "#0a754e",
   },
   dimWhite: "#e7e7e7",
 };
@@ -23,7 +24,7 @@ const fonts = {
 
 const styles = {
   global: {
-    body: {
+    html: {
       scrollBehavior: "smooth",
       fontSize: "90%",
     },

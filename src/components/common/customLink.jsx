@@ -15,7 +15,7 @@ const CustomLink = (props) => {
         {...props}
       >
         <Text> {label}</Text>
-        {icon && <Icon as={icon} />}
+        {icon && <Icon color="secondary.100" as={icon} />}
       </Center>
     </Link>
   );

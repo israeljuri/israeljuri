@@ -17,7 +17,10 @@ const NotFound = () => {
           gap="5"
           pt={{ base: 0, md: "10rem" }}
         >
-          <Heading size="3xl">😒 Coming soon</Heading>
+          <Flex direction={{ base: "column", md: "row" }}>
+            <Heading size="3xl">😒</Heading>
+            <Heading size="3xl">Coming soon</Heading>
+          </Flex>
           <Text mb="5" fontSize="xl" maxW="70ch" lineHeight="1.5">
             The page you're looking is under development.
           </Text>
