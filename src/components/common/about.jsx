@@ -86,7 +86,7 @@ const About = () => {
               </Fade>
 
               <Grid
-                templateColumns="max-content max-content"
+                templateColumns="max-content"
                 columnGap="5"
                 rowGap="2"
                 mt="-1"

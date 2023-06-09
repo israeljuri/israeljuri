@@ -40,14 +40,11 @@ const information = {
 };
 
 const recentTechnologies = [
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "React Native (Expo)",
-  "Next.js",
-  // "Astro",
-  "Git",
-  "Docker",
+  "JavaScript (Vanilla & TypeScript)",
+  "React.js (NEXT & Astro)",
+  "State Management (Redux, Zustand & Recoil)",
+  "UI (Chakra-UI, Radix, React-Aria)",
+  "Git & Github",
 ];
 
 import theraswiftImage from "../../assets/experience/theraswift.png";

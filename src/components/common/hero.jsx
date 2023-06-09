@@ -51,15 +51,14 @@ const Hero = () => {
               <Fade delay={400} duration={200}>
                 <Text fontSize="md" lineHeight="2" maxW="50ch">
                   Currently, I am focused on building high-quality{" "}
-                  <ColorText>web & mobile</ColorText> applications using {" "}
-                  <ColorText>React</ColorText> and{" "}
-                  <ColorText>React Native</ColorText>.
+                  <ColorText>web</ColorText> applications using {" "}
+                  <ColorText>React</ColorText> and it's eco-system.
                 </Text>
 
                 <Text fontSize="md" lineHeight="2" maxW="50ch">
-                  However, I am a Software Developer with experience in Java,
-                  JavaScript & TypeScript. I also{" "}
-                  <LinkText label="write" path="/articles" /> about the
+                  However, I am a Frontend Engineer with experience in
+                  JavaScript & TypeScript. I also started{" "}
+                  <LinkText label="blogging" path="/articles" /> about the
                   underlying principles of Programming
                 </Text>
               </Fade>
