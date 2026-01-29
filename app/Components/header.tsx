@@ -13,13 +13,13 @@ const Header = () => {
 
         <article className="flex gap-4 items-center justify-center flex-col text-center">
           <h1 className="max-w-[20ch] text-6xl">
-            I enjoy turning ideas in to real solutions for the web
+            I enjoy turning ideas into real solutions for the web
           </h1>
 
           <p className="mt-5 max-w-md text-slate-600">
-            Primarily using <strong>JavaScript/Typescript</strong>,{' '}
-            <strong>Cloudflare</strong> and every tool available in their
-            eco-system.
+            I primarily work with <strong>JavaScript</strong> and <strong>Typescript</strong>{' '}
+           leveraging <strong>Cloudflare</strong> and the tools across their
+            eco-systems.
           </p>
         </article>
 

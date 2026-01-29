@@ -58,7 +58,7 @@ const About = () => {
               </figure>
             </div>
             <p className="mt-5 text-md max-w-[50ch] text-slate-600">
-              I'm a Web Developer with a passion for crafting clean, scalable
+              I'm a web developer with a passion for crafting clean, scalable
               user interfaces and everything that powers the backend.
             </p>
 
