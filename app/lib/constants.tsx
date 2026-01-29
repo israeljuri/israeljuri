@@ -142,7 +142,7 @@ export const tags = [
   'backend',
   'language',
   'framework',
-  'CSS',
+  'css',
   'tool',
   'database',
   'authentication',
@@ -154,7 +154,7 @@ export const experiences = {
     company: 'Technoville',
     position: 'Frontend Engineer',
     duration: '2022 - Present',
-    type: 'Adhoc - Remote',
+    type: 'Remote - Adhoc',
     description:
       'I started my journey hacking together websites using HTML, CSS and JavaScript. That curiosity quickly grew into a deep interest in building thoughtful, user-focused interfaces.',
   },
@@ -162,8 +162,8 @@ export const experiences = {
     logo: 'dfet.png',
     company: 'De-Future Elite Technology',
     position: 'Frontend Engineer',
-    duration: '2 years',
-    type: 'Contract - Remote',
+    duration: '1 year',
+    type: 'Remote - Contract',
     description:
       'I started my journey hacking together websites using HTML, CSS and JavaScript. That curiosity quickly grew into a deep interest in building thoughtful, user-focused interfaces.',
   },
@@ -172,7 +172,7 @@ export const experiences = {
     company: 'TheraSwift Rx',
     position: 'Full Stack Engineer',
     duration: '2 years',
-    type: 'Contract - Hybrid',
+    type: 'Hybrid - Contract',
     description:
       'I started my journey hacking together websites using HTML, CSS and JavaScript. That curiosity quickly grew into a deep interest in building thoughtful, user-focused interfaces.',
   },

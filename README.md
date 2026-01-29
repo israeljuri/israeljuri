@@ -1,7 +1,6 @@
 # 👋 Hi, I’m Israel Juri
 
-I’m a developer who enjoys building clean, fast, and thoughtful web experiences.  
-Currently focused on modern web tooling, performance, and learning in public.
+I’m a developer who enjoys turning ideas into real solutions for the web.
 
 ## 🛠 Tech I Use
 

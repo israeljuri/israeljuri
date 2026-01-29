@@ -7,15 +7,30 @@ import { LinkedIn } from './icons/linkedin';
 import { XformerlyTwitter } from './icons/twitter';
 import { useLocation } from 'react-router';
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Navbar = () => {
   const pathname = useLocation().pathname;
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollThreshold = 100; // Adjust this value as needed
+      setScrolled(window.scrollY > scrollThreshold);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial scroll position
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className="fixed w-full z-50">
-      <Container className="bg-white/60 backdrop-blur-sm rounded-full py-6 px-10 my-4 flex items-center justify-between">
+    <nav className={`w-full z-50 transition-all duration-300 ${scrolled ? 'fixed' : 'relative'}`}>
+      <Container className={`bg-white/60 backdrop-blur-sm rounded-full py-6 px-10 my-4 flex items-center justify-between transition-all duration-300 ${scrolled ? 'shadow-lg' : ''}`}>
         <ul className="hidden sm:flex items-center gap-10 lg:gap-14">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
