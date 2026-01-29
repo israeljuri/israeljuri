@@ -1,79 +1,27 @@
-# Welcome to React Router!
+# 👋 Hi, I’m Israel Juri
 
-A modern, production-ready template for building full-stack React applications using React Router.
+I’m a developer who enjoys building clean, fast, and thoughtful web experiences.  
+Currently focused on modern web tooling, performance, and learning in public.
 
-## Features
+## 🛠 Tech I Use
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- JavaScript / TypeScript
+- React
+- Tailwind CSS
+- Vite
+- Cloudflare
 
-## Getting Started
+## 🚀 What I’m Into
 
-### Installation
+- Building real world solutions
+- Clean UI & good UX
+- Performance and developer experience
+- Learning and experimenting
 
-Install the dependencies:
+## 🌐 Find Me
 
-```bash
-npm install
-```
+- Portfolio:
+- GitHub: you’re here
+- LinkedIn / X / Twitter:
 
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Previewing the Production Build
-
-Preview the production build locally:
-
-```bash
-npm run preview
-```
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-Deployment is done using the Wrangler CLI.
-
-To build and deploy directly to production:
-
-```sh
-npm run deploy
-```
-
-To deploy a preview URL:
-
-```sh
-npx wrangler versions upload
-```
-
-You can then promote a version to production after verification or roll it out progressively.
-
-```sh
-npx wrangler versions deploy
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+Thanks for stopping by ✨
