@@ -32,10 +32,10 @@ const Technologies = () => {
                 setActiveTag(tag);
               }}
               className={
-                'border  py-2 px-4 rounded-full text-slate-600 capitalize text-xs ' +
+                'py-2 px-4 rounded-full text-slate-600 capitalize text-xs ' +
                 (tag === activeTag
-                  ? 'bg-orange-500 text-white border-orange-500'
-                  : 'text-slate-600 border-slate-100 hover:text-slate-900')
+                  ? 'bg-orange-500 text-white border-transparent'
+                  : 'bg-slate-100 border-slate-100 hover:text-slate-900')
               }
             >
               {tag} {tag === activeTag && filteredTech.length}

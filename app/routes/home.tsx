@@ -4,6 +4,7 @@ import About from '../Components/about';
 import Experience from '../Components/experience';
 import Articles from '../Components/articles';
 import Technologies from '../Components/technologies';
+import Contact from '~/Components/contact';
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -27,6 +28,8 @@ export default function Home() {
       <Articles />
 
       <Technologies />
+
+      <Contact />
     </>
   );
 }

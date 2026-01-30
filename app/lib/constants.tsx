@@ -138,7 +138,7 @@ export const experiences = {
     company: 'Technoville',
     position: 'Frontend Engineer',
     duration: '2022 - Present',
-    type: 'Remote - Adhoc',
+    type: 'Remote — Adhoc',
     description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
   },
   dfet: {
@@ -146,7 +146,7 @@ export const experiences = {
     company: 'De-Future Elite Technology',
     position: 'Frontend Engineer',
     duration: '1 year',
-    type: 'Remote - Contract',
+    type: 'Remote — Contract',
     description: `It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
   },
   theraswift: {
@@ -154,7 +154,7 @@ export const experiences = {
     company: 'TheraSwift Rx',
     position: 'Full Stack Engineer',
     duration: '2 years',
-    type: 'Hybrid - Contract',
+    type: 'Hybrid — Contract',
     description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
   },
   linxcom: {
@@ -162,7 +162,7 @@ export const experiences = {
     company: 'Linxcom Tecnology Institutes',
     position: 'Instructor',
     duration: '2 years',
-    type: 'Full time - Onsite',
+    type: 'Full time — Onsite',
     description: `It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
   },
 };

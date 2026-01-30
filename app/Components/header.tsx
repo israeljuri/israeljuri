@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import Container from './container';
 import Logo from './logo';
-import {  Mail, Mailbox } from 'lucide-react';
+import { Mail, Mailbox } from 'lucide-react';
 
 const Header = () => {
   return (
@@ -17,18 +17,19 @@ const Header = () => {
           </h1>
 
           <p className="mt-5 max-w-lg text-slate-600">
-            I primarily work with <strong>JavaScript</strong>, <strong>Typescript</strong> and {' '}
-            <strong>Cloudflare</strong> leveraging the tools across their eco-systems to build.
+            I primarily work with <strong>JavaScript</strong>,{' '}
+            <strong>Typescript</strong> and <strong>Cloudflare</strong>{' '}
+            leveraging the tools across their eco-systems to build.
           </p>
         </article>
 
         <div className="flex md:flex-row flex-col items-center gap-4 md:gap-4 mt-16">
-          <Link to="">
+          <Link to="/portfolio">
             <button className="bg-orange-500 py-3 px-10 rounded-full text-white">
               See my Portfolio
             </button>
           </Link>
-          <Link to="">
+          <Link to="/contact">
             <button className="text-slate-500 hover:text-slate-900 transition-all duration-300 border-b border-slate-500 sm:border-transparent hover:border-slate-900 py-3 px-2 text-md flex items-center gap-2">
               Drop a message
               <Mailbox className="w-5 h-5" />
