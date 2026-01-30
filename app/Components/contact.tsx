@@ -52,14 +52,14 @@ const Contact = () => {
     <section className="bg-white py-10 md:py-20">
       <Container className="max-w-2xl">
         <div className="text-left mb-12">
-          <h2 className="text-3xl md:text-4xl mb-4">Drop a Message</h2>
+          <h2 className="text-3xl mb-4">Drop a Message</h2>
           <p className="text-slate-600">
             Have a project in mind or want to collaborate? I'd love to hear from
             you!
           </p>
         </div>
 
-        <div className="bg-slate-100 rounded-2xl p-8 md:p-12">
+        <div className="border border-slate-200 rounded-2xl p-8 md:p-8">
           {isSubmitted ? (
             <div className="text-center py-12">
               <CheckCircle className="w-10 h-10 text-green-500 mx-auto mb-6" />
@@ -93,7 +93,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border bg-white border-slate-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 outline-none"
+                  className="w-full px-4 py-3 bg-slate-100 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 outline-none"
                   placeholder="Your name"
                 />
               </div>
@@ -112,7 +112,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border bg-white border-slate-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 outline-none"
+                  className="w-full px-4 py-3 bg-slate-100 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 outline-none"
                   placeholder="you@email.com"
                 />
               </div>
@@ -131,7 +131,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border bg-white border-slate-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 outline-none resize-none"
+                  className="w-full px-4 py-3 bg-slate-100 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 outline-none resize-none"
                   placeholder="Enter your message here"
                 />
               </div>
