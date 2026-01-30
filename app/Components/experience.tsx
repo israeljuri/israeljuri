@@ -18,10 +18,10 @@ const Experience = () => {
               return (
                 <button
                   className={
-                    'px-4 py-2 text-xs font-semibold rounded-full ' +
+                    'border px-4 py-2 text-xs rounded-full ' +
                     (activeExperience === value
-                      ? 'bg-orange-500 text-white'
-                      : 'text-slate-600 bg-slate-100 hover:text-slate-900')
+                      ? 'bg-orange-500 text-white border-orange-500'
+                      : 'text-slate-600  border-slate-100 hover:text-slate-900')
                   }
                   onClick={() => setActiveExperience(value)}
                   key={key}
@@ -32,24 +32,23 @@ const Experience = () => {
             })}
           </nav>
           <section className="bg-white min-h-80 text-left border border-slate-200 rounded-2xl p-8 sm:p-10">
-            <article className="space-y-4">
+            <article className="space-y-2">
+              <img
+                className="w-50 rounded-full"
+                src={activeExperience.logo}
+                alt={activeExperience.company}
+              />
               <p>
                 <strong>{activeExperience.position}</strong> @{' '}
                 {activeExperience.company}
               </p>
             </article>
 
-            <img
-              className="w-50 py-10"
-              src={activeExperience.logo}
-              alt={activeExperience.company}
-            />
-
-            <p className="text-slate-600 text-md">
+            <p className="py-10 text-slate-600 text-lg">
               {activeExperience.description}
             </p>
 
-            <p className="mt-10">{activeExperience.type}</p>
+            <p>{activeExperience.type}</p>
           </section>
         </div>
       </Container>

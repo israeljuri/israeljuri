@@ -14,7 +14,7 @@ const Articles = () => {
           />
           <div className="absolute top-0 left-0 w-full h-full z-5 bg-black/10 backdrop-blur-2xl"></div>
           <article className="absolute top-0 left-0 w-full h-full z-10 flex flex-col gap-10 items-center justify-center px-6">
-            <h2 className="text-4xl sm:text-5xl max-w-[20ch] text-center text-white">
+            <h2 className="text-5xl sm:text-6xl max-w-[20ch] text-center text-white">
               I write about the intrinsic parts of JavaScript
             </h2>
 

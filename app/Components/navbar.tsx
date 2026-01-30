@@ -33,9 +33,9 @@ const Navbar = () => {
       className={`w-full z-50 transition-all duration-300 px-4 ${scrolled ? 'fixed' : 'relative'}`}
     >
       <Container
-        className={`bg-white/60 backdrop-blur-sm rounded-full py-4 px-4 my-4 flex items-center justify-between transition-all duration-300 ${scrolled ? 'shadow-' : ''}`}
+        className={`bg-white/60 backdrop-blur-sm rounded-full py-4 px-4 my-4 flex items-center justify-between transition-all duration-300 ${scrolled ? 'shadow-lg' : ''}`}
       >
-        <ul className="hidden sm:flex items-center gap-10 lg:gap-14">
+        <ul className="hidden sm:flex items-center gap-10 lg:gap-14 pl-4">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
 
@@ -55,7 +55,7 @@ const Navbar = () => {
           })}
         </ul>
 
-        <section className="hidden sm:flex items-center gap-8">
+        <section className="hidden sm:flex items-center gap-8 pr-4">
           <GitHub className="w-5 h-5" />
           <LinkedIn className="w-5 h-5" />
           <XformerlyTwitter className="w-5 h-5" />

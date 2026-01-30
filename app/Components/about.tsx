@@ -1,10 +1,11 @@
 import Container from './container';
 import { Link } from 'react-router';
-import { FileText } from 'lucide-react';
+import { FileText, LocateFixedIcon, LocateIcon, MapPin } from 'lucide-react';
+import { about } from '~/lib/constants';
 
 const About = () => {
   return (
-    <section className="grid gap-20 bg-slate-100 py-10 sm:py-20 md:py-30">
+    <section className="grid gap-20 bg-slate-50 py-20 md:py-30">
       <Container className="grid gap-10 sm:gap-20 items-start justify-center grid-cols-1 md:grid-cols-2">
         <div className="grid gap-6 place-items-center justify-center sm:justify-end">
           <figure className="rounded-3xl overflow-hidden w-60 sm:w-80 h-60 sm:h-80">
@@ -14,6 +15,10 @@ const About = () => {
               alt="Israel Juri"
             />
           </figure>
+          <Link to="/resume.pdf" className='flex items-center gap-2 text-semibold text-sm text-slate-600' target="_blank" download>
+            <MapPin className="w-4 h-4 text-orange-500" />
+            Lagos, Nigeria
+          </Link>
         </div>
 
         <section className="space-y-10 flex flex-col items-center sm:items-start px-8 sm:px-0">
@@ -38,36 +43,23 @@ const About = () => {
               </figure>
             </div>
 
-            <p className="text-md max-w-[50ch] text-slate-600">
-              You've found my portfolio and I am glad you're here.
-            </p>
-            <p className="text-md max-w-[50ch] text-slate-600">
-              I am a Nigerian based JavaScript lover who is passionate about
-              solving real world problems with code.
-            </p>
-
-            <p className="text-md max-w-[50ch] text-slate-600">
-              I started my journey hacking together websites using HTML, CSS and
-              JavaScript.
-            </p>
-
-            <p className="text-md max-w-[50ch] text-slate-600">
-              That curiosity quickly grew into a deep interest that is shaping
-              me into a fullstack developer today.
-            </p>
-
-            <p className="  text-md max-w-[50ch] text-slate-600">
-              I've had the privilege of working with some truly interesting
-              individuals and startups over the past five years.
-            </p>
+            {about.map((item, index) => (
+              <p
+                key={index}
+                className="text-md max-w-[50ch] text-slate-700 bg-white p-4 rounded-2xl"
+              >
+                {item.paragraph}
+              </p>
+            ))}
           </article>
-          <Link to="/resume.pdf" target="_blank" download>
+              <Link to="/resume.pdf" target="_blank" download>
             <button className="text-slate-500 text-sm hover:text-slate-900 transition-all duration-300 border-b border-slate-500  hover:border-slate-900 py-3 px-2 flex items-center gap-2">
               Get my Résumé
               <FileText className="w-4 h-4" />
             </button>
           </Link>
         </section>
+        
       </Container>
     </section>
   );

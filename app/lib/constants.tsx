@@ -166,3 +166,30 @@ export const experiences = {
     description: `It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
   },
 };
+
+export const about = [
+  {
+    paragraph: "You've found my portfolio and I am glad you're here.",
+    audio: '/one.wav',
+  },
+  {
+    paragraph:
+      'I am a Nigerian based JavaScript lover who is passionate about solving real world problems with code.',
+    audio: '/two.wav',
+  },
+  {
+    paragraph:
+      'I started my journey hacking together websites using HTML, CSS and JavaScript.',
+    audio: '/three.wav',
+  },
+  {
+    paragraph:
+      'That curiosity quickly grew into a deep interest that is shaping me into a fullstack developer today.',
+    audio: '/four.wav',
+  },
+  {
+    paragraph:
+      "I've had the privilege of working with some truly interesting individuals and startups over the past five years.",
+    audio: '/five.wav',
+  },
+];
