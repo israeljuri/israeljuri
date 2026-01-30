@@ -30,8 +30,8 @@ const Header = () => {
           </Link>
           <Link to="">
             <button className="text-slate-500 hover:text-slate-900 transition-all duration-300 border-b border-slate-500 sm:border-transparent hover:border-slate-900 py-3 px-2 text-md flex items-center gap-2">
-              Get in touch
-              <Mail className="w-4 h-4" />
+              Drop a message
+              <Mailbox className="w-5 h-5" />
             </button>
           </Link>
         </div>

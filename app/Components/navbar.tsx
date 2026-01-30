@@ -95,7 +95,7 @@ const Navbar = () => {
                 <Link
                   to={link.href}
                   className={
-                    'rounded-full py-2 hover:text-orange-500 transition-all text-5xl duration-200 ' +
+                    'rounded-full py-2 hover:text-orange-500 transition-all text-4xl duration-200 ' +
                     (isActive ? 'text-orange-500' : 'text-slate-300')
                   }
                 >
