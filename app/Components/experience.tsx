@@ -44,11 +44,11 @@ const Experience = () => {
             </p>
           </article>
 
-          <p className="text-slate-600 text-lg">
+          <p className="text-slate-600 text-md">
             {activeExperience.description}
           </p>
 
-          <p className="text-slate-600 mt-10">{activeExperience.type}</p>
+          <p className="mt-10">{activeExperience.type}</p>
         </section>
       </div>
     </Container>

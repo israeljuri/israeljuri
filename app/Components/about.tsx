@@ -22,11 +22,18 @@ const About = () => {
 
         <section className="space-y-10 flex flex-col items-center sm:items-start">
           <article className="text-center sm:text-left space-y-8">
-            <div className="flex justify-center sm:justify-start items-center gap-2">
+            <div className="flex sm:flex-row flex-col justify-center sm:justify-start items-center gap-2">
+              <figure className="block sm:hidden w-14 sm:w-14 h-14 sm:h-14 overflow-hidden">
+                <img
+                  src="waving.png"
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </figure>
               <h1 className="text-4xl sm:text-4xl">
                 Welcome, I'm <span className="font-bold">Israel</span>
               </h1>
-              <figure className="w-14 sm:w-14 h-14 sm:h-14 overflow-hidden">
+              <figure className="hidden sm:block w-14 sm:w-14 h-14 sm:h-14 overflow-hidden">
                 <img
                   src="waving.png"
                   alt=""

@@ -16,7 +16,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollThreshold = 100; // Adjust this value as needed
+      const scrollThreshold = 200; // Adjust this value as needed
       setScrolled(window.scrollY > scrollThreshold);
     };
 
