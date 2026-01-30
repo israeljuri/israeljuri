@@ -12,7 +12,7 @@ const Experience = () => {
       <h2 className="text-3xl">Experiences/Teams</h2>
 
       <div id="experience" className="grid grid-cols-1 gap-10">
-        <nav className="flex flex-wrap items-center justify-start gap-1 rounded-2xl">
+        <nav className="flex flex-wrap items-center justify-start gap-2 rounded-2xl">
           {Object.entries(experiences).map(([key, value]) => {
             return (
               <button

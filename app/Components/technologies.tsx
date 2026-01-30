@@ -21,7 +21,7 @@ const Technologies = () => {
     <Container className="space-y-10 py-20 min-w-0">
       <h2 className="text-3xl">Technologies/Tools</h2>
 
-      <div className="flex flex-wrap gap-1 justify-start">
+      <div className="flex flex-wrap gap-2 justify-start">
         {tags.map((tag) => (
           <button
             type="button"
