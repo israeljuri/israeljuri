@@ -8,7 +8,7 @@ import Experience from './experience';
 
 const About = () => {
   return (
-    <section className="grid gap-10 bg-slate-50 py-10 sm:py-20 md:py-30">
+    <section className="grid gap-20 bg-slate-50 py-10 sm:py-20 md:py-30">
       <Container className="grid gap-10 sm:gap-20 items-center justify-center grid-cols-1 md:grid-cols-2">
         <div className="grid gap-6 place-items-center justify-center sm:justify-end">
           <figure className="rounded-full overflow-hidden w-60 sm:w-80 h-60 sm:h-80">
@@ -30,7 +30,7 @@ const About = () => {
         <section className="space-y-10 flex flex-col items-center sm:items-start">
           <article className="text-center sm:text-left space-y-10">
             <div className="flex justify-center sm:justify-start items-center gap-2">
-              <h1 className="text-5xl sm:text-4xl">
+              <h1 className="text-4xl sm:text-4xl">
                 Hi, I'm <span className="font-bold">Israel</span>
               </h1>
               <figure className="w-14 sm:w-14 h-14 sm:h-14 overflow-hidden">
@@ -63,6 +63,7 @@ const About = () => {
             </p>
           </article>
         </section>
+
       </Container>
 
       <Experience />

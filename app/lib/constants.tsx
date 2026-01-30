@@ -155,8 +155,7 @@ export const experiences = {
     position: 'Frontend Engineer',
     duration: '2022 - Present',
     type: 'Remote - Adhoc',
-    description:
-      'I started my journey hacking together websites using HTML, CSS and JavaScript. That curiosity quickly grew into a deep interest in building thoughtful, user-focused interfaces.',
+    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
   },
   dfet: {
     logo: 'dfet.png',
@@ -164,8 +163,7 @@ export const experiences = {
     position: 'Frontend Engineer',
     duration: '1 year',
     type: 'Remote - Contract',
-    description:
-      'I started my journey hacking together websites using HTML, CSS and JavaScript. That curiosity quickly grew into a deep interest in building thoughtful, user-focused interfaces.',
+    description: `It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
   },
   theraswift: {
     logo: 'theraswift.png',
@@ -173,8 +171,7 @@ export const experiences = {
     position: 'Full Stack Engineer',
     duration: '2 years',
     type: 'Hybrid - Contract',
-    description:
-      'I started my journey hacking together websites using HTML, CSS and JavaScript. That curiosity quickly grew into a deep interest in building thoughtful, user-focused interfaces.',
+    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
   },
   linxcom: {
     logo: 'linxcom.png',
@@ -182,8 +179,7 @@ export const experiences = {
     position: 'Full Stack Engineer',
     duration: '2 years',
     type: 'Contract - Onsite',
-    description:
-      'I started my journey hacking together websites using HTML, CSS and JavaScript. That curiosity quickly grew into a deep interest in building thoughtful, user-focused interfaces.',
+    description: `It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
   },
 };
 
