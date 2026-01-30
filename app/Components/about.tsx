@@ -9,29 +9,22 @@ import Experience from './experience';
 const About = () => {
   return (
     <section className="grid gap-20 bg-slate-50 py-10 sm:py-20 md:py-30">
-      <Container className="grid gap-10 sm:gap-20 items-center justify-center grid-cols-1 md:grid-cols-2">
+      <Container className="grid gap-10 sm:gap-20 items-start justify-center grid-cols-1 md:grid-cols-2">
         <div className="grid gap-6 place-items-center justify-center sm:justify-end">
-          <figure className="rounded-full overflow-hidden w-60 sm:w-80 h-60 sm:h-80">
+          <figure className="rounded-3xl overflow-hidden w-60 sm:w-80 h-60 sm:h-80">
             <img
               src="avatar-two.png"
-              className="scale-110 hover:scale-115 transition-all duration-300 w-full h-full object-cover"
+              className="scale-120 w-full h-full object-cover"
               alt="Israel Juri"
             />
           </figure>
-
-          <Link to="/resume.pdf" target="_blank" download>
-            <button className="text-slate-500 text-sm hover:text-slate-900 transition-all duration-300 border-b border-slate-500 sm:border-transparent hover:border-slate-900 py-3 px-2 flex items-center gap-2">
-              Get my Résumé
-              <FileText className="w-4 h-4" />
-            </button>
-          </Link>
         </div>
 
         <section className="space-y-10 flex flex-col items-center sm:items-start">
           <article className="text-center sm:text-left space-y-8">
             <div className="flex justify-center sm:justify-start items-center gap-2">
               <h1 className="text-4xl sm:text-4xl">
-                Hi, I'm <span className="font-bold">Israel</span>
+                Welcome, I'm <span className="font-bold">Israel</span>
               </h1>
               <figure className="w-14 sm:w-14 h-14 sm:h-14 overflow-hidden">
                 <img
@@ -53,6 +46,12 @@ const About = () => {
               individuals and startups over the past five years.
             </p>
           </article>
+          <Link to="/resume.pdf" target="_blank" download>
+            <button className="text-slate-500 text-sm hover:text-slate-900 transition-all duration-300 border-b border-slate-500  hover:border-slate-900 py-3 px-2 flex items-center gap-2">
+              Get my Résumé
+              <FileText className="w-4 h-4" />
+            </button>
+          </Link>
         </section>
       </Container>
 

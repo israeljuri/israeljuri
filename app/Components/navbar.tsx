@@ -40,7 +40,7 @@ const Navbar = () => {
                 <Link
                   to={link.href}
                   className={
-                    'rounded-full py-2 hover:text-slate-800 transition-all duration-200 font-semibold ' +
+                    'rounded-full py-2 hover:text-slate-800 transition-all duration-200 ' +
                     (isActive ? 'text-orange-500' : 'text-slate-400')
                   }
                 >
