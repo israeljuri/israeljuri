@@ -2,13 +2,9 @@ import Container from './container';
 import { Link } from 'react-router';
 import { FileText } from 'lucide-react';
 
-import Articles from './articles';
-import Technologies from './technologies';
-import Experience from './experience';
-
 const About = () => {
   return (
-    <section className="grid gap-20 bg-slate-50 py-10 sm:py-20 md:py-30">
+    <section className="grid gap-20 bg-slate-100 py-10 sm:py-20 md:py-30">
       <Container className="grid gap-10 sm:gap-20 items-start justify-center grid-cols-1 md:grid-cols-2">
         <div className="grid gap-6 place-items-center justify-center sm:justify-end">
           <figure className="rounded-3xl overflow-hidden w-60 sm:w-80 h-60 sm:h-80">
@@ -20,8 +16,8 @@ const About = () => {
           </figure>
         </div>
 
-        <section className="space-y-10 flex flex-col items-center sm:items-start">
-          <article className="text-center sm:text-left space-y-8">
+        <section className="space-y-10 flex flex-col items-center sm:items-start px-8 sm:px-0">
+          <article className="text-center sm:text-left space-y-8 ">
             <div className="flex sm:flex-row flex-col justify-center sm:justify-start items-center gap-2">
               <figure className="block sm:hidden w-14 sm:w-14 h-14 sm:h-14 overflow-hidden">
                 <img
@@ -43,13 +39,25 @@ const About = () => {
             </div>
 
             <p className="text-md max-w-[50ch] text-slate-600">
+              You've found my portfolio and I am glad you're here.
+            </p>
+            <p className="text-md max-w-[50ch] text-slate-600">
+              I am a Nigerian based JavaScript lover who is passionate about
+              solving real world problems with code.
+            </p>
+
+            <p className="text-md max-w-[50ch] text-slate-600">
               I started my journey hacking together websites using HTML, CSS and
-              JavaScript. That curiosity quickly grew into a deep interest in
-              building thoughtful, user-focused interfaces.
+              JavaScript.
+            </p>
+
+            <p className="text-md max-w-[50ch] text-slate-600">
+              That curiosity quickly grew into a deep interest that is shaping
+              me into a fullstack developer today.
             </p>
 
             <p className="  text-md max-w-[50ch] text-slate-600">
-              I've had the previledge of working with some truly interresting
+              I've had the privilege of working with some truly interesting
               individuals and startups over the past five years.
             </p>
           </article>
@@ -61,12 +69,6 @@ const About = () => {
           </Link>
         </section>
       </Container>
-
-      <Experience />
-
-      <Articles />
-
-      <Technologies />
     </section>
   );
 };

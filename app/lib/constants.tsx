@@ -9,7 +9,6 @@ import { TailwindCSS } from '~/Components/icons/tailwind-css';
 import { Shadcnui } from '~/Components/icons/shadcn';
 import { ReactRouter } from '~/Components/icons/react-router';
 import { Cloudflare } from '~/Components/icons/cloudflare';
-import { Prisma } from '~/Components/icons/prisma';
 import { DrizzleORM } from '~/Components/icons/drizzle';
 import { Zod } from '~/Components/icons/zod';
 import { CloudflareWorkers } from '~/Components/icons/cloudflare-workers';
@@ -52,86 +51,71 @@ export const techstack = [
   {
     name: 'JavaScript',
     icon: <JavaScript />,
-    level: 4,
     tags: ['frontend', 'backend', 'language'],
   },
   {
     name: 'TypeScript',
     icon: <TypeScript />,
-    level: 4,
     tags: ['frontend', 'language'],
   },
   {
     name: 'React',
     icon: <React />,
-    level: 4,
     tags: ['frontend', 'library'],
   },
   {
     name: 'React Router',
     icon: <ReactRouter />,
-    level: 4,
     tags: ['frontend', 'framework'],
   },
   {
     name: 'Next.js',
     icon: <Nextjs />,
-    level: 4,
     tags: ['frontend', 'framework'],
   },
   {
     name: 'Tailwind CSS',
     icon: <TailwindCSS />,
-    level: 4,
     tags: ['frontend', 'css'],
   },
-
   {
     name: 'Shadcn UI',
     icon: <Shadcnui />,
-    level: 4,
     tags: ['frontend', 'css'],
   },
   {
     name: 'Zod',
     icon: <Zod />,
-    level: 4,
     tags: ['tool', 'validation'],
   },
   {
     name: 'React Query',
     icon: <ReactQuery />,
-    level: 4,
     tags: ['frontend', 'framework'],
   },
   {
     name: 'Hono',
     icon: <Hono />,
-    level: 4,
     tags: ['backend', 'framework'],
   },
   {
     name: 'Cloudflare Workers',
     icon: <CloudflareWorkers />,
-    level: 4,
     tags: ['backend', 'framework'],
   },
   {
     name: 'Cloudflare',
     icon: <Cloudflare />,
-    level: 4,
     tags: ['backend', 'database', 'framework'],
   },
   {
     name: 'Drizzle',
     icon: <DrizzleORM />,
-    level: 4,
     tags: ['backend', 'database', 'tool'],
   },
   {
     name: 'Better Auth',
     icon: <BetterAuth />,
-    level: 4,
     tags: ['backend', 'authentication', 'framework'],
   },
 ];
@@ -176,15 +160,9 @@ export const experiences = {
   linxcom: {
     logo: 'linxcom.png',
     company: 'Linxcom Tecnology Institutes',
-    position: 'Full Stack Engineer',
+    position: 'Instructor',
     duration: '2 years',
-    type: 'Contract - Onsite',
+    type: 'Full time - Onsite',
     description: `It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
   },
 };
-
-export const projects = [
-  {
-    id: 1,
-  },
-];

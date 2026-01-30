@@ -29,8 +29,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`w-full z-50 transition-all duration-300 px-4 ${scrolled ? 'fixed' : 'relative'}`}>
-      <Container className={`bg-white/60 backdrop-blur-sm rounded-full py-4 px-4 my-4 flex items-center justify-between transition-all duration-300 ${scrolled ? 'shadow-' : ''}`}>
+    <nav
+      className={`w-full z-50 transition-all duration-300 px-4 ${scrolled ? 'fixed' : 'relative'}`}
+    >
+      <Container
+        className={`bg-white/60 backdrop-blur-sm rounded-full py-4 px-4 my-4 flex items-center justify-between transition-all duration-300 ${scrolled ? 'shadow-' : ''}`}
+      >
         <ul className="hidden sm:flex items-center gap-10 lg:gap-14">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
@@ -41,7 +45,7 @@ const Navbar = () => {
                   to={link.href}
                   className={
                     'rounded-full py-2 hover:text-slate-800 transition-all duration-200 ' +
-                    (isActive ? 'text-orange-500' : 'text-slate-400')
+                    (isActive && 'text-orange-500')
                   }
                 >
                   {link.name}
