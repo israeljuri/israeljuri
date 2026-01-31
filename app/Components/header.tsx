@@ -1,11 +1,67 @@
+// app/Components/header.tsx
 import { Link } from 'react-router';
 import Container from './container';
 import Logo from './logo';
 import { Mail, Mailbox } from 'lucide-react';
+import { useGSAPAnimations } from '~/hooks/useGSAPAnimations';
+import { useEffect } from 'react';
 
 const Header = () => {
+  const { elementRef, timelineRef } = useGSAPAnimations();
+
+  useEffect(() => {
+    if (!timelineRef.current) return;
+
+    const tl = timelineRef.current;
+
+    // Animate title
+    tl.from(
+      "header h1",
+      {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+      }
+    )
+    // Animate subtitle
+    .from(
+      "header p",
+      {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out"
+      },
+      "-=0.6" // Start 0.6s before previous animation ends
+    )
+    // Animate buttons
+    .from(
+      "header .button-container",
+      {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out"
+      },
+      "-=0.4"
+    )
+    // Animate logo
+    .from(
+      "header figure",
+      {
+        scale: 0.8,
+        opacity: 0,
+        duration: 1,
+        ease: "back.out(1.7)"
+      },
+      "-=0.8"
+    );
+
+  }, [timelineRef]);
+
   return (
-    <header className="bg-white">
+    <header ref={elementRef} className="bg-white">
       <Container className="pt-10 sm:pt-30 pb-40 flex flex-col text-center items-center gap-6 justify-center">
         <figure className="hidden sm:block">
           <Logo />
@@ -23,7 +79,7 @@ const Header = () => {
           </p>
         </article>
 
-        <div className="flex md:flex-row flex-col items-center gap-4 md:gap-4 mt-16">
+        <div className="button-container flex md:flex-row flex-col items-center gap-4 md:gap-4 mt-16">
           <Link to="/portfolio">
             <button className="bg-orange-500 py-3 px-10 rounded-full text-white">
               See my Portfolio
