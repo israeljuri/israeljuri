@@ -139,7 +139,7 @@ export const experiences = {
     position: 'Frontend Engineer',
     duration: '2022 - Present',
     type: 'Remote — Adhoc',
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+    description: `Turned mockups into intuitive user interfaces. Collaborating with the design and backend team to create a seamless user experience. Across the companys projects, Mostly working adhoc, I have been able to deliver high-quality results that meet the needs of the team.`,
   },
   dfet: {
     logo: 'dfet.png',
@@ -147,7 +147,7 @@ export const experiences = {
     position: 'Frontend Engineer',
     duration: '1 year',
     type: 'Remote — Contract',
-    description: `It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    description: `Worked as a contract frontend engineer for the team. At almost every project, single handedly came up with UI element designs and implemented them, while also working with the backend team to create a seamless user experience across the companys subsidiaries.`,
   },
   theraswift: {
     logo: 'theraswift.png',
@@ -155,7 +155,7 @@ export const experiences = {
     position: 'Full Stack Engineer',
     duration: '2 years',
     type: 'Hybrid — Contract',
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+    description: `From the ground up, I was able to build a fullstack desktop application that allowed the company to manage their prescriptions and appointments. Contributed also to other projects of the company.`,
   },
   linxcom: {
     logo: 'linxcom.png',
@@ -163,7 +163,7 @@ export const experiences = {
     position: 'Instructor',
     duration: '2 years',
     type: 'Full time — Onsite',
-    description: `It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    description: `An instructor at Linxcom Tecnology Institutes, I was able to teach students how to code and help them understand the basics of programming, helped some kickstart their journey into the world of programming, was of great help to the company in the growth of their students.`,
   },
 };
 

@@ -5,7 +5,7 @@ import { about } from '~/lib/constants';
 
 const About = () => {
   return (
-    <section className="grid gap-20 bg-slate-100 py-20 md:py-30">
+    <section className="grid gap-20 py-20 md:py-20">
       <Container className="grid gap-10 sm:gap-20 items-start justify-center grid-cols-1 md:grid-cols-2">
         <div className="grid gap-6 place-items-center justify-center sm:justify-end">
           <figure className="rounded-3xl overflow-hidden w-60 sm:w-80 h-60 sm:h-80">
@@ -15,6 +15,13 @@ const About = () => {
               alt="Israel Juri"
             />
           </figure>
+
+          <Link to="/resume.pdf" target="_blank" download>
+            <button className="text-slate-500 hover:text-slate-900 transition-all duration-300 border rounded-full border-slate-200 hover:border-slate-900 py-3 px-10 text-md flex items-center gap-2">
+              Get my Résumé
+              <FileText className="w-4 h-4" />
+            </button>
+          </Link>
         </div>
 
         <section className="space-y-10 flex flex-col items-center sm:items-start px-2 sm:px-0">
@@ -42,18 +49,12 @@ const About = () => {
             {about.map((item, index) => (
               <p
                 key={index}
-                className="text-md max-w-[50ch] text-slate-700 bg-white p-4 rounded-2xl"
+                className="border border-slate-200 hover:border-slate-200 transition-border duration-200 text-md max-w-[50ch] text-slate-700 bg-white p-4 rounded-2xl"
               >
                 {item.paragraph}
               </p>
             ))}
           </article>
-          <Link to="/resume.pdf" target="_blank" download>
-            <button className="text-slate-500 text-sm hover:text-slate-900 transition-all duration-300 border-b border-slate-500  hover:border-slate-900 py-3 px-2 flex items-center gap-2">
-              Get my Résumé
-              <FileText className="w-4 h-4" />
-            </button>
-          </Link>
         </section>
       </Container>
     </section>
