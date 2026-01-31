@@ -1,4 +1,3 @@
-// app/hooks/useGSAPAnimations.ts
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -6,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 interface AnimationConfig {
-  trigger?: string;
+  trigger?: string | Element;
   start?: string;
   end?: string;
   scrub?: boolean | number;
@@ -21,30 +20,32 @@ export const useGSAPAnimations = (config: AnimationConfig = {}) => {
   useEffect(() => {
     if (!elementRef.current) return;
 
-    const element = elementRef.current;
-    
-    // Create timeline
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: config.trigger || element,
-        start: config.start || "top 80%",
-        end: config.end || "bottom 20%",
-        scrub: config.scrub || false,
-        pin: config.pin || false,
-        markers: config.markers || false,
-      },
-    });
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: config.trigger || elementRef.current,
+          start: config.start ?? 'top 80%',
+          end: config.end ?? 'bottom 20%',
+          scrub: config.scrub ?? false,
+          pin: config.pin ?? false,
+          markers: config.markers ?? false,
+        },
+      });
 
-    timelineRef.current = tl;
+      timelineRef.current = tl;
+    }, elementRef);
 
     return () => {
-      // Cleanup
-      if (timelineRef.current) {
-        timelineRef.current.kill();
-      }
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ctx.revert(); // 🔑 cleans ONLY this hook’s animations & triggers
     };
-  }, [config.trigger, config.start, config.end, config.scrub, config.pin, config.markers]);
+  }, [
+    config.trigger,
+    config.start,
+    config.end,
+    config.scrub,
+    config.pin,
+    config.markers,
+  ]);
 
   return { elementRef, timelineRef };
 };

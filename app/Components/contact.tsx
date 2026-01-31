@@ -52,8 +52,8 @@ const Contact = () => {
     <section className="bg-white py-10 md:py-20">
       <Container className="max-w-2xl">
         <div className="text-left mb-12">
-          <h2 className="text-3xl mb-4">Drop a Message</h2>
-          <p className="text-slate-600">
+          <h2 className="text-3xl mb-2">Drop a Message</h2>
+          <p className="text-sm text-slate-600">
             Have a project in mind or want to collaborate? I'd love to hear from
             you!
           </p>

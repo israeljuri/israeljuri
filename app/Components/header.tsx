@@ -79,7 +79,7 @@ const Header = () => {
           </p>
         </article>
 
-        <div className="button-container flex md:flex-row flex-col items-center gap-4 md:gap-4 mt-16">
+        <div className="button-container flex md:flex-row flex-col items-center gap-4 md:gap-4 mt-6 sm:mt-16">
           <Link to="/portfolio">
             <button className="bg-orange-500 py-3 px-10 rounded-full text-white">
               See my Portfolio

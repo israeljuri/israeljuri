@@ -1,12 +1,14 @@
 import { Home, Mailbox } from 'lucide-react';
 import { Link } from 'react-router';
+import Container from '~/Components/container';
 
 const Portfolio = () => {
   return (
-    <div className="grid place-items-center min-h-[60vh]">
+  <Container>
+      <div className="grid place-items-center min-h-[60vh]">
       <article className="flex items-center text-center flex-col gap-10">
-        <h1 className="text-6xl max-w-lg">This page will be ready soon</h1>
-        <p className="text-lg text-slate-600 mb-4 max-w-lg">
+        <h1 className="text-5xl sm:text-6xl max-w-lg">This page will be ready soon</h1>
+        <p className="text-lg text-slate-600 mb-2 max-w-lg">
           😏 My portfolio is currently under construction, but you can always
           reach out to me through the contact page.
         </p>
@@ -19,6 +21,7 @@ const Portfolio = () => {
         </Link>
       </article>
     </div>
+  </Container>
   );
 };
 

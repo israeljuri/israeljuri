@@ -169,13 +169,13 @@ export const experiences = {
 
 export const about = [
   {
-    paragraph: "You've found my portfolio and I am glad you're here.",
-    audio: '/one.wav',
-  },
-  {
     paragraph:
       'I am a Nigerian based JavaScript lover who is passionate about solving real world problems with code.',
     audio: '/two.wav',
+  },
+  {
+    paragraph: "You've found my portfolio and I am glad you're here.",
+    audio: '/one.wav',
   },
   {
     paragraph:
@@ -194,7 +194,4 @@ export const about = [
   },
 ];
 
-
-export const works = [
-  
-]
+export const works = [];
