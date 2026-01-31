@@ -16,10 +16,10 @@ const Header = () => {
             I enjoy turning ideas into real solutions for the web
           </h1>
 
-          <p className="mt-5 max-w-lg text-slate-600">
+          <p className="mt-5 max-w-md text-slate-600">
             I primarily work with <strong>JavaScript</strong>,{' '}
-            <strong>Typescript</strong> and <strong>Cloudflare</strong>{' '}
-            leveraging the tools across their eco-systems to build.
+            <strong>TypeScript</strong>, and <strong>Cloudflare</strong> for infrastructure,{' '}
+            leveraging these tools and their ecosystems to build for the web.
           </p>
         </article>
 
