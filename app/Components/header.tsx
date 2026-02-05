@@ -73,9 +73,9 @@ const Header = () => {
           </h1>
 
           <p className="mt-5 max-w-md text-slate-600">
-            I primarily work with <strong>JavaScript</strong>,{' '}
-            <strong>TypeScript</strong>, and <strong>Cloudflare</strong> for infrastructure,{' '}
-            leveraging these tools and their ecosystems to build for the web.
+            I primarily work with <strong>JavaScript (TypeScript)</strong>,{' '}
+            <strong>React.js</strong>, and <strong>Cloudflare</strong> for infrastructure.{' '}
+            Leveraging these tools and their ecosystems I contribute to making the world a better place.
           </p>
         </article>
 

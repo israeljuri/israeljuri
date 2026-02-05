@@ -58,39 +58,35 @@ const About = () => {
   }, [timelineRef]);
 
   return (
-    <section ref={elementRef} className="grid gap-20 bg-white py-10 md:py-30">
-      <Container className="grid gap-10 sm:gap-20 items-start justify-center grid-cols-1 md:grid-cols-2">
-        <div className="about-image grid gap-6 place-items-center justify-center sm:justify-end">
-          <figure className="relative rounded-3xl overflow-hidden w-60 sm:w-80 h-60 sm:h-80">
+    <section
+      ref={elementRef}
+      className="grid gap-20 bg-slate-50 py-10 md:py-30"
+    >
+      <Container className="grid gap-10 md:gap-20 items-start justify-center grid-cols-1 md:grid-cols-2">
+        <div className="about-image grid gap-6 place-items-center justify-center md:justify-end">
+          <figure className="relative rounded-3xl overflow-hidden w-60 md:w-80 h-60 md:h-80">
             <img
               src="avatar-two.png"
               className="scale-120 w-full h-full object-cover"
               alt="Israel Juri"
             />
           </figure>
-
-          <Link to="/resume.pdf" target="_blank" download>
-            <button className="text-slate-500 hover:text-slate-900 transition-all duration-300 rounded-full border-slate-200 hover:border-slate-900 py-3 px-10 text-md flex items-center gap-2">
-              Get my Résumé
-              <FileText className="w-4 h-4" />
-            </button>
-          </Link>
         </div>
 
-        <section className="space-y-10 flex flex-col items-center sm:items-start px-2 sm:px-0">
-          <article className="text-center sm:text-left ">
-            <div className="about-title flex sm:flex-row flex-col justify-center sm:justify-start items-center gap-2 mb-8">
-              <figure className="block sm:hidden w-14 sm:w-14 h-14 sm:h-14 overflow-hidden">
+        <section className="space-y-10 flex flex-col items-center md:items-start px-2 md:px-0">
+          <article className="text-center md:text-left ">
+            <div className="about-title flex md:flex-row flex-col justify-center md:justify-start items-center gap-2 mb-8">
+              <figure className="block md:hidden w-14 md:w-14 h-14 md:h-14 overflow-hidden">
                 <img
                   src="waving.png"
                   alt=""
                   className="w-full h-full object-cover"
                 />
               </figure>
-              <h1 className="text-3xl sm:text-4xl">
+              <h1 className="text-3xl md:text-4xl">
                 Welcome, I'm <span className="font-bold">Israel</span>
               </h1>
-              <figure className="hidden sm:block w-14 sm:w-14 h-14 sm:h-14 overflow-hidden">
+              <figure className="hidden md:block w-14 md:w-14 h-14 md:h-14 overflow-hidden">
                 <img
                   src="waving.png"
                   alt=""
@@ -102,11 +98,20 @@ const About = () => {
             {about.map((item, index) => (
               <p
                 key={index}
-                className="mt-4 about-paragraph text-md max-w-[50ch] text-slate-700 bg-white p-6 rounded-2xl text-left  border border-slate-200"
+                className="mt-4 about-paragraph max-w-[50ch] text-slate-700 bg-white p-6 rounded-2xl text-left  border border-slate-200"
               >
                 {item.paragraph}
               </p>
             ))}
+
+            <div className="mt-6 flex items-center justify-center md:justify-start">
+              <Link to="/resume.pdf" target="_blank" download>
+                <button className="text-slate-500 hover:text-slate-900 transition-all duration-300 rounded-full border-slate-200 hover:border-slate-900 py-3 text-md flex items-center gap-2">
+                  Get my Résumé
+                  <FileText className="w-4 h-4" />
+                </button>
+              </Link>
+            </div>
           </article>
         </section>
       </Container>

@@ -103,7 +103,7 @@ const Experience = () => {
             </div>
           </nav>
 
-          <section className="bg-white h-120 grid justify-center text-left border border-slate-200 rounded-2xl p-8 sm:p-10 transition-all duration-500 ease-in-out">
+          <section className="bg-white h-100 grid justify-center text-left border border-slate-200 rounded-2xl p-8 sm:p-10 transition-all duration-500 ease-in-out">
             <article className="space-y-2">
               <img
                 className="w-50 rounded-full transition-all duration-300"
@@ -116,7 +116,7 @@ const Experience = () => {
               </p>
             </article>
 
-            <p className="py-10 text-slate-600 transition-opacity duration-300">
+            <p className="py-10 text-md  text-slate-600 transition-opacity duration-300">
               {activeExperience.description}
             </p>
 
